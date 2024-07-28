@@ -430,7 +430,7 @@ const Services = ({ mobile }) => {
               </div>
             </div>
 
-            <div className="carousel-right ps-4 " style={{ height: "800px" }}>
+            <div className="carousel-right ps-4 serviceTab">
               <h2
                 className={`fw-bold list-slider txtcolor-secondary display-6 ${activeTab !== 0 ? "opacity-50" : ""}`}
                 data-bs-target="#carouselExampleIntervalB"
