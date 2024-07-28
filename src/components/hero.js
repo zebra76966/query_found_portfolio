@@ -13,7 +13,7 @@ const Hero = ({ mobile }) => {
     <>
       {!mobile && (
         <div className="hero-box d-flex align-items-center justify-content-center">
-          <motion.img src="./mascot.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }} />
+          <motion.img src="./mascot2.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }} />
 
           <motion.div className="position-absolute top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.8 }}>
             QUERY-FOUND
@@ -53,7 +53,7 @@ const Hero = ({ mobile }) => {
         <div className="mobile hero-box">
           <div className="bordered-img-box animatedborder">
             <motion.img
-              src={`${mobile ? "./mascot.png" : "./hero.png"}`}
+              src={`${mobile ? "./mascot2.png" : "./hero.png"}`}
               className="hero-img"
               initial="hidden"
               animate="visible"
