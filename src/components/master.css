@@ -100,7 +100,7 @@ body {
   /* font-family: "steelfish-bi"; */
   /* font-size: 70px; */
   bottom: 15%;
-  left: 3%;
+  left: 2%;
   height: auto;
   display: flex;
   color: #351518;
@@ -564,12 +564,6 @@ hr {
   transition: all 0.5s ease-in-out;
 }
 
-/* .carousel-item iframe {
-  height: 250px;
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-} */
-
 .box-projects {
   font-family: "Poppins", sans-serif;
   border-radius: 76px 0 0 76px;
@@ -578,6 +572,7 @@ hr {
   background-color: #351518;
   /* position: fixed; */
   top: 2%;
+  position: relative;
   animation: resetWidth 0.9s ease-in-out forwards;
 }
 
@@ -587,6 +582,7 @@ hr {
   height: 30dvh;
   margin-top: 10px;
   /* position: fixed; */
+  position: relative;
   bottom: 2%;
   width: 30vw;
   background-color: #ee9747 !important;
@@ -1105,6 +1101,12 @@ hr {
 }
 
 @media only screen and (max-width: 1400px) {
+  .carousel-item img {
+    max-height: 250px;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+  }
+
   .mobileBar {
     position: fixed;
     top: 1%;
@@ -1117,14 +1119,73 @@ hr {
   .serviceTab {
     height: 1050px;
   }
-  /* .bordered-img-box .hero-img {
+  .progression-bar {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-height: 880px) {
+  .carousel-item img {
+    max-height: 180px !important;
+  }
+  .box-projects .text-head h4,
+  .box-services .text-head h4 {
+    font-size: 26px !important;
+  }
+
+  .services-list {
+    height: 110px !important;
+  }
+}
+
+@media screen and (max-height: 980px) {
+  .carousel-item img {
+    max-height: 200px;
+  }
+  .box-projects .text-head h4,
+  .box-services .text-head h4 {
+    font-size: 28px !important;
+  }
+
+  .box-projects h2,
+  .box-services h2 {
+    /* font-size: 32px !important; */
+  }
+  .services-list {
+    height: 150px;
+  }
+}
+
+@media screen and (min-height: 1200px), screen and (min-width: 1600px) {
+  .textShrink {
     width: 100%;
-    height: auto;
-    object-fit: unset;
-    padding: 0;
-    border-radius: 20px;
-    animation: float 5s ease-in-out infinite;
-  } */
+    -webkit-line-clamp: 3;
+  }
+
+  .controlbar {
+    position: absolute;
+    bottom: 2%;
+    width: 95%;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  .textShrink {
+    width: 100%;
+    display: block;
+  }
+
+  .controlbar {
+    position: absolute;
+    bottom: 2%;
+    width: 95%;
+  }
+}
+
+.controlbar {
+  position: absolute;
+  bottom: 2%;
+  width: 95%;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -1440,8 +1501,8 @@ hr {
 }
 
 /* Ripples play */
-
+/* 
 .chk {
   height: 900px;
   overflow-y: auto;
-}
+} */

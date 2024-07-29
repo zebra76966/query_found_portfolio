@@ -138,9 +138,9 @@ const Project = ({ mobile }) => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-center justify-content-between controlbar">
                 <div className="customIndicators ps-3 w-100">
-                  <div className="progression-bar rounded-pill bgcolor-primary p-1 w-50 d-flex align-items-center">
+                  <div className="progression-bar rounded-pill bgcolor-primary p-1 w-75 d-flex align-items-center">
                     {!isPlay ? (
                       <button className="btn bg-none border-0 txtcolor-secondary btn-lg btn-play" onClick={() => setIsPlay(!isPlay)}>
                         <i className="fa fa-play " />
