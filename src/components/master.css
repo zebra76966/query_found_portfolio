@@ -575,7 +575,7 @@ hr {
   background-color: #351518;
   /* position: fixed; */
   top: 2%;
-  position: relative;
+  position: absolute;
   animation: resetWidth 0.9s ease-in-out forwards;
 }
 
@@ -585,7 +585,7 @@ hr {
   height: 30dvh;
   margin-top: 10px;
   /* position: fixed; */
-  position: relative;
+  position: absolute;
   bottom: 2%;
   width: 30vw;
   background-color: #ee9747 !important;
