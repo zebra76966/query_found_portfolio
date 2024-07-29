@@ -1155,7 +1155,7 @@ hr {
   }
 }
 
-@media screen and (min-height: 1500px), screen and (min-width: 2200) {
+@media screen and (max-height: 1500px), screen and (max-width: 2200px) {
   .project-enlarge .video-container {
     position: relative;
     padding-bottom: 50.25%; /* 16:9 aspect ratio */
@@ -1166,7 +1166,7 @@ hr {
   }
 }
 
-@media screen and (min-height: 1300px), screen and (min-width: 2200) {
+@media screen and (max-height: 1300px), screen and (max-width: 2200px) {
   .project-enlarge .video-container {
     position: relative;
     padding-bottom: 36.25%; /* 16:9 aspect ratio */
@@ -1177,7 +1177,38 @@ hr {
   }
 }
 
+@media screen and (max-height: 1300px) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 50.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+}
+
+@media screen and (max-height: 1200px) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 50.25% !important; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+}
+
 @media screen and (max-height: 980px) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 40.25% !important; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+
   .carousel-item img {
     max-height: 200px;
   }
@@ -1254,6 +1285,15 @@ hr {
   }
 }
 @media screen and (max-height: 796px) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 30.25% !important; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+
   .textShrink {
     width: 100%;
     -webkit-line-clamp: 1 !important;
