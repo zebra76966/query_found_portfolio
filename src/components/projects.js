@@ -321,7 +321,7 @@ const Project = ({ mobile }) => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center justify-content-between">
+              <div className="d-flex align-items-center justify-content-between controlbar2">
                 <div className="customIndicators ps-3 w-100">
                   <div className="progression-bar rounded-pill bgcolor-primary p-1 w-50 d-flex align-items-center">
                     {!isPlay ? (

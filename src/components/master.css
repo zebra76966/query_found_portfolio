@@ -1499,14 +1499,6 @@ hr {
   }
 }
 
-.dotted-border {
-  margin-top: 100px;
-  width: 100%;
-  border: 3px dashed #351518;
-}
-
-/* Ripple Play */
-
 .mobile.loader-wrapper {
   position: absolute;
   bottom: unset !important;
@@ -1521,6 +1513,113 @@ hr {
   z-index: 99;
   scale: 0.6;
 }
+
+/* Final Mobile */
+@media only screen and (max-width: 500px) {
+  /* Side Nav Mobile =====================> */
+  .mobileSidenav {
+    transform-origin: left;
+    transform: scale(0.8);
+  }
+
+  .mobile.left-text {
+    font-size: 30px;
+    top: 33%;
+    left: -9%;
+    height: 50px;
+    transform: rotate(270deg);
+    padding: 5px 30px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+  }
+  .mobile.bottom-text {
+    font-size: 15px;
+    height: 50px;
+    bottom: 1%;
+    border: 2px solid #351518;
+    padding: 10px 30px;
+    padding-top: 20px;
+    border-radius: 40px;
+    right: 3%;
+    z-index: 3;
+    color: #351518;
+  }
+
+  .mobile.left-socials .bubble {
+    padding: 4px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .mobile .top-right-text {
+    font-size: 45px !important;
+  }
+  .bar {
+    font-size: 12px;
+    height: 70px;
+    padding-left: 65px !important;
+  }
+  .mobilebar .icon-attach {
+    height: 50px;
+    width: 50px;
+    padding: 10px !important;
+  }
+  .mobilebar .icon-attach img {
+    height: 90%;
+  }
+
+  .mobilebar .icon-send {
+    height: 50px;
+    width: 50px;
+    padding: 10px !important;
+  }
+  .mobilebar .icon-send img {
+    height: 90%;
+  }
+
+  .box-projects .text-head h4,
+  .box-services .text-head h4 {
+    font-size: 20px !important;
+  }
+  .box-projects .detail-block button,
+  .box-services .detail-block button {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.675rem;
+  }
+
+  .box-projects p,
+  .box-services p {
+    font-size: 13px !important;
+  }
+  .icon-project-arrow {
+    height: 50px;
+    width: 50px;
+  }
+  .controlbar2 {
+    margin-top: 20px;
+    transform: scale(0.9);
+    transform-origin: left;
+  }
+  .mobile.loader-wrapper {
+    position: absolute;
+    bottom: unset !important;
+    left: unset !important;
+    top: 28% !important;
+    right: 20% !important;
+    z-index: 99;
+    scale: 0.6;
+  }
+}
+
+/* Final Mobile Resizing End */
+
+.dotted-border {
+  margin-top: 100px;
+  width: 100%;
+  border: 3px dashed #351518;
+}
+
+/* Ripple Play */
 
 .loader-wrapper {
   position: absolute;
