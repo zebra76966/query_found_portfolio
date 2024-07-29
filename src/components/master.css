@@ -1155,6 +1155,28 @@ hr {
   }
 }
 
+@media screen and (min-height: 1500px), screen and (min-width: 2200) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 50.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+}
+
+@media screen and (min-height: 1300px), screen and (min-width: 2200) {
+  .project-enlarge .video-container {
+    position: relative;
+    padding-bottom: 36.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 44px;
+    max-height: 450px;
+  }
+}
+
 @media screen and (max-height: 980px) {
   .carousel-item img {
     max-height: 200px;
@@ -1243,7 +1265,7 @@ hr {
   .project-enlarge .controlbar {
     transform: scale(0.8);
     transform-origin: left;
-    bottom: 0% !important;
+    bottom: 1% !important;
   }
   .controlbar {
     transform: scale(0.9);
