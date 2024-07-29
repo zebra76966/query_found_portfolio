@@ -125,7 +125,7 @@ const Services = ({ mobile }) => {
 
           {enlarge && (
             <div className="d-flex h-100">
-              <div className="carousel-left">
+              <div className="carousel-left position-relative">
                 <div className={`text-head d-flex align-items-center justify-content-between my-3 `}>
                   <h4 className="txtcolor-secondary fw-bold w-50  ps-4">Services</h4>
                   <hr className="secondary-border border border-2 rounded w-25  " />
@@ -152,7 +152,7 @@ const Services = ({ mobile }) => {
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Django</button>
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Email Js</button>
 
-                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                           Developed a small e-merch store for and independent artist providing him the platform to sell his print media, posters, apparels etc. App uses email.js to directly send the
                           order...
                         </p>
@@ -172,7 +172,7 @@ const Services = ({ mobile }) => {
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Django</button>
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Email Js</button>
 
-                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                           Developed a small e-merch store for and independent artist providing him the platform to sell his print media, posters, apparels etc. App uses email.js to directly send the
                           order...
                         </p>
@@ -192,7 +192,7 @@ const Services = ({ mobile }) => {
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Django</button>
                         <button className="btn-sm txtcolor-secondary secondary-border border-1 border rounded-pill bgcolor-primary me-2">Email Js</button>
 
-                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                        <p className={`txtcolor-secondary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                           Developed a small e-merch store for and independent artist providing him the platform to sell his print media, posters, apparels etc. App uses email.js to directly send the
                           order...
                         </p>
@@ -234,7 +234,7 @@ const Services = ({ mobile }) => {
                   </div>
                 </div>
 
-                <div className="d-flex align-items-center justify-content-between">
+                <div className="d-flex align-items-center justify-content-between controlbar">
                   <div className="customIndicators ps-3 w-100">
                     <div className="progression-bar rounded-pill bgcolor-secondary p-1 w-50 d-flex align-items-center">
                       {!isPlay ? (
@@ -420,7 +420,7 @@ const Services = ({ mobile }) => {
           )} */}
 
           <div className="h-100">
-            <div className="carousel-left">
+            <div className="carousel-left position-relative">
               <div className={`text-head d-flex align-items-center justify-content-between my-3 `}>
                 <h4 className="txtcolor-secondary fw-bold w-50  ps-4">Services</h4>
                 <hr className="secondary-border border border-2 rounded w-25  " />

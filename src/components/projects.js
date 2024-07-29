@@ -62,7 +62,7 @@ const Project = ({ mobile }) => {
       {!mobile && (
         <div className={`box-projects ${enlarge ? "project-enlarge" : ""} py-4 px-3`}>
           <div className="d-flex h-100">
-            <div className="carousel-left">
+            <div className="carousel-left position-relative">
               <div className={`text-head d-flex align-items-center justify-content-between my-3 `}>
                 <h4 className="txtcolor-primary fw-bold w-50  ps-4">Latest Projects</h4>
                 <hr className="primary-border border border-2 rounded w-25  " />
@@ -89,7 +89,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
@@ -109,7 +109,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
@@ -129,7 +129,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
@@ -245,7 +245,7 @@ const Project = ({ mobile }) => {
       {mobile && (
         <div className={`mobile box-projects  py-4 px-3`}>
           <div className="d-flex h-100">
-            <div className="carousel-left">
+            <div className="carousel-left position-relative">
               <div className={`text-head d-flex align-items-center justify-content-between my-3 `}>
                 <h4 className="txtcolor-primary fw-bold w-50  ps-4">Latest Projects</h4>
                 <hr className="primary-border border border-2 rounded w-25  " />
@@ -272,7 +272,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
@@ -292,7 +292,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
@@ -312,7 +312,7 @@ const Project = ({ mobile }) => {
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
                       <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "" : "textShrink"}`}>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
                         Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
                         order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
                       </p>
