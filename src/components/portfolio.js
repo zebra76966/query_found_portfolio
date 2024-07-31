@@ -31,7 +31,7 @@ const Portfolio = ({ setCurentProj }) => {
         <div className="row pb-5">
           {datas.map((ini, i) => {
             return (
-              <div className="col-md-6 mt-4" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.2 }}>
+              <div className="col-md-6 p-4" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.2 }}>
                 <div
                   className="w-100"
                   onClick={() => {

@@ -3,7 +3,7 @@
     "name": "Calories Tracker",
     "url": "https://calorie-tracker-xi.vercel.app/",
     "desc": "Developed an calories tracker which provide users with array of tool too manage there calories intake and create diet plan along with that users can log there daily activity, food etc. for better accessing there diet. Also users can subscribe to the premium subscription to get personalized diet plans for there requirements.",
-    "small_desc": "E-merch store for and idependent artist",
+    "small_desc": "Developed an calories tracker which provide users with array of tool too manage there calories intake",
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
     "images": [
       "https://portfolio-fiverr-self.vercel.app/cal3.jpg",

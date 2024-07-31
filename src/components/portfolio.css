@@ -65,19 +65,19 @@
 }
 
 .custom-card {
-  border-radius: 16px;
+  border-radius: 2.5rem;
   cursor: pointer;
   overflow: hidden;
   width: 100%;
   position: relative;
-  height: 700px;
-  background-size: 150%;
+  height: 670px;
+  background-size: 160%;
   outline: 5px solid transparent;
   transition: all 0.5s ease-in-out;
 }
 
 .custom-card:hover {
-  background-size: 160%;
+  background-size: 180%;
   outline: 5px dashed #351518;
 }
 

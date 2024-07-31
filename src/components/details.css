@@ -56,7 +56,7 @@
 }
 
 .roundedimg {
-  border-radius: 16px;
+  border-radius: 30px;
   cursor: pointer;
   overflow: hidden;
   width: 100%;
@@ -66,3 +66,202 @@
   outline: 5px solid transparent;
   transition: all 0.5s ease-in-out;
 }
+
+.roundedimg.main {
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  height: 900px;
+  outline: 5px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+.roundedimg.bodyimg {
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  height: 600px;
+  outline: 5px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn.bgcolor-secondary:hover {
+  color: #ee9747;
+}
+
+/* Aniamtion WUe Scroll Down */
+.scrolldown {
+  scale: 1.5;
+  --color: #351518;
+  --sizeX: 30px;
+  --sizeY: 50px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: var(sizeX / 2);
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.scrolldown::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #2a547066;
+}
+
+@keyframes scrolldown-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+
+.chevrondown:nth-child(odd) {
+  animation: pulse54012 500ms ease infinite alternate;
+}
+
+.chevrondown:nth-child(even) {
+  animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+
+@keyframes pulse54012 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+/* Animation Que Scroll down end */
+
+.closeDetBtn {
+  height: 50px;
+  width: 50px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #351518;
+}
+.closeDetBtn:hover {
+  scale: 1.05;
+}
+
+.get-in-touch {
+  position: relative;
+}
+.get-in-touch .pulse:nth-child(1)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 2px solid #351518;
+  animation: clickMe 2s ease-in-out infinite;
+}
+.get-in-touch .pulse:nth-child(2)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 2px solid #351518;
+  animation: clickMe 2s ease-in-out 0.4s infinite;
+}
+.get-in-touch .pulse:nth-child(3)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 2px solid transparent;
+  animation: clickMe 2s ease-in-out 0.8s infinite;
+}
+
+@keyframes clickMe {
+  0% {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 3px solid #351518;
+  }
+  50% {
+    width: 115%;
+    height: 125%;
+    border-radius: 2.5rem;
+    border: 2px solid #351518;
+  }
+  100% {
+    width: 120%;
+    height: 130%;
+    border-radius: 3rem;
+    border: 1px solid #35151800;
+  }
+}
+
+/* Content start */
