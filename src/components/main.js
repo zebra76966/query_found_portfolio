@@ -5,6 +5,9 @@ import Bar from "./emailjs/bar";
 import Project from "./projects";
 import Services from "./services";
 import { motion } from "framer-motion";
+import Portfolio from "./portfolio";
+import Details from "./details";
+import datas from "./projects.json";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -12,6 +15,8 @@ const fadeUpVariants = {
 };
 const Main = () => {
   const [mobile, setMobile] = useState(window.innerWidth < 1400);
+  const [portfolio, setFolio] = useState(false);
+  const [activeProj, setCurentProj] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,23 +25,30 @@ const Main = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  useEffect(() => {
+    if (!portfolio) {
+      setCurentProj(0);
+    }
+  }, [portfolio]);
+
   return (
     <>
+      {console.log(activeProj)}
       <div className="startload">
         <div className="h-100 d-flex align-items-center justify-content-center">
           <h2 className="display-5 ">Loading...</h2>
         </div>
       </div>
+
       <div className={`${mobile ? "" : "hero"} d-flex align-items-center justify-content-center`}>
         <div className="row w-100">
           <motion.div className={`${mobile ? "" : "col-lg-1"} mobileBar`} initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }}>
-            <Header mobile={mobile} />
+            <Header mobile={mobile} setFolio={(e) => setFolio(e)} />
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
@@ -75,6 +87,14 @@ const Main = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={`container-fluid portfolio ${portfolio ? "in" : "out"} thinScroll`}>
+        <Portfolio setCurentProj={(e) => setCurentProj(e)} />
+      </div>
+
+      <div className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
+        <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} />
       </div>
 
       <div className="container-fluid">

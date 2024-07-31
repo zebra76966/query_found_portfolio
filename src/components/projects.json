@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Calories Tracker",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Developed an calories tracker which provide users with array of tool too manage there calories intake and create diet plan along with that users can log there daily activity, food etc. for better accessing there diet. Also users can subscribe to the premium subscription to get personalized diet plans for there requirements.",
+    "small_desc": "E-merch store for and idependent artist",
+    "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/cal3.jpg",
+      "https://portfolio-fiverr-self.vercel.app/cal4.jpg",
+      "https://portfolio-fiverr-self.vercel.app/cal1.jpg",
+      "https://portfolio-fiverr-self.vercel.app/cal2.jpg"
+    ]
+  },
+  {
+    "name": "Music Rating app",
+    "url": "https://critiq.se/",
+    "desc": "Critiq is a dynamic music-focused social web application that transforms the way users engage with and discover music. With features like song commenting, rating, personalized feeds, music sharing, and user activities, Critiq creates a vibrant community for music enthusiasts. The seamless integration of Spotify through the Spotify API enhances the user experience, providing access to a vast music library.",
+    "small_desc": "Critiq is a dynamic music-focused social web application",
+    "tech_stack": ["React", "Django", "Django DRF", "PostgreSQL"],
+    "images": ["./crtiq_1.jpeg", "./crtiq_2.jpeg", "./crtiq_3.jpeg", "./crtiq_4.jpeg"]
+  },
+  {
+    "name": "Art Merch Store",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.",
+    "small_desc": "E-merch store for and idependent artist",
+    "tech_stack": ["React", "Email JS", "PHP", "MySQL"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
+      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
+      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
+      "https://portfolio-fiverr-self.vercel.app/artstore.jpg"
+    ]
+  },
+  {
+    "name": "CarbonTrack",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Introducing CarbonTrack, your personal carbon emissions tracker. Easily input your monthly and yearly activities, from transportation to energy usage and diet. CarbonTrack provides comprehensive analysis, breaking down emissions by category and presenting data through intuitive charts and graphs. Set customizable reduction goals and receive insightful tips for greener living. With CarbonTrack, monitoring and managing your carbon footprint is simple and secure.",
+    "small_desc": "CarbonTrack, your personal carbon emissions tracker",
+    "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg"
+    ]
+  },
+  {
+    "name": "CarbonTrack",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Introducing CarbonTrack, your personal carbon emissions tracker. Easily input your monthly and yearly activities, from transportation to energy usage and diet. CarbonTrack provides comprehensive analysis, breaking down emissions by category and presenting data through intuitive charts and graphs. Set customizable reduction goals and receive insightful tips for greener living. With CarbonTrack, monitoring and managing your carbon footprint is simple and secure.",
+    "small_desc": "CarbonTrack, your personal carbon emissions tracker",
+    "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
+      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg"
+    ]
+  }
+]

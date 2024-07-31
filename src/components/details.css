@@ -1,0 +1,68 @@
+.portfolio.in {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 99;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadeup 0.8s ease-in-out forwards;
+}
+
+@keyframes slidefadeup {
+  0% {
+    top: 60%;
+    transform: translate(-50%, 60%);
+    border-radius: 50px;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+}
+
+.portfolio.out {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 99;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadedown 0.8s ease-in-out forwards;
+}
+
+@keyframes slidefadedown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+  100% {
+    top: 60%;
+    transform: translate(-50%, 60%);
+    border-radius: 50px;
+  }
+}
+
+.roundedimg {
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  object-fit: cover;
+  height: 300px;
+  outline: 5px solid transparent;
+  transition: all 0.5s ease-in-out;
+}

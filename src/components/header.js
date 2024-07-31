@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Header = ({ mobile }) => {
+const Header = ({ mobile, setFolio }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
 
@@ -15,6 +15,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("home");
+                setFolio(false);
               }}
             >
               <img src="./logo2.gif" className="rounded-circle" style={{ height: "70px", width: "70px", objectFit: "cover" }} />
@@ -26,6 +27,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("home");
+                setFolio(false);
               }}
             >
               <img src="./icons/home_a.svg" />
@@ -36,6 +38,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("assets");
+                setFolio(true);
               }}
             >
               {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}
@@ -46,6 +49,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("about");
+                setFolio(false);
               }}
             >
               {active == "about" ? <img src="./icons/doc_a.svg" className="ms-1" /> : <img src="./icons/doc_b.svg" className="ms-1" />}
@@ -91,6 +95,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("home");
+                setFolio(false);
               }}
             >
               <img src="./icons/home_a.svg" />
@@ -102,6 +107,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("assets");
+                setFolio(true);
               }}
             >
               {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}
@@ -112,6 +118,7 @@ const Header = ({ mobile }) => {
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("about");
+                setFolio(false);
               }}
             >
               {active == "about" ? <img src="./icons/doc_a.svg" className="ms-1" /> : <img src="./icons/doc_b.svg" className="ms-1" />}
