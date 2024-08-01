@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "./header";
 import Hero from "./hero";
 import Bar from "./emailjs/bar";
@@ -36,6 +36,17 @@ const Main = () => {
     }
   }, [portfolio]);
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (activeProj === 0 && containerRef.current) {
+      setTimeout(() => {
+        containerRef.current.scrollTop = 0;
+      }, 500);
+      // Scrolls the element to the top
+    }
+  }, [activeProj]);
+
   return (
     <>
       {console.log(activeProj)}
@@ -48,7 +59,7 @@ const Main = () => {
       <div className={`${mobile ? "" : "hero"} d-flex align-items-center justify-content-center`}>
         <div className="row w-100">
           <motion.div className={`${mobile ? "" : "col-lg-1"} mobileBar`} initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }}>
-            <Header mobile={mobile} setFolio={(e) => setFolio(e)} />
+            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} />
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
@@ -93,8 +104,8 @@ const Main = () => {
         <Portfolio setCurentProj={(e) => setCurentProj(e)} />
       </div>
 
-      <div className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
-        <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} />
+      <div ref={containerRef} className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
+        <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} setCurentProj={(e) => setCurentProj(e)} />
       </div>
 
       <div className="container-fluid">

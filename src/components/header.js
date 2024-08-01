@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Header = ({ mobile, setFolio }) => {
+const Header = ({ mobile, setFolio, setCurentProj }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
 
@@ -39,6 +39,8 @@ const Header = ({ mobile, setFolio }) => {
               onClick={() => {
                 setActive("assets");
                 setFolio(true);
+
+                setCurentProj(0);
               }}
             >
               {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}

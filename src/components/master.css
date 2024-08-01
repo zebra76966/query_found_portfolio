@@ -30,8 +30,10 @@
   src: url("./../../public/fonts/rockbilly/Rockybilly.ttf") format("truetype");
 }
 
+html,
 body {
   background-color: #e1d8d2;
+  scroll-behavior: smooth !important;
 }
 
 .hero {
@@ -1891,3 +1893,114 @@ hr {
     opacity: 1;
   }
 }
+
+/* Eye Animation */
+.eye-container {
+  width: 200px;
+  height: 200px;
+  background-color: #351518;
+  border-radius: 75% 0%;
+  padding: 2px 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+.eye {
+  width: 100px;
+  height: 100px;
+  background-color: #e1d8d2;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  animation: 4s lettleeye infinite;
+}
+
+.eye:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-color: #351518;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  animation: 4s look-around infinite;
+}
+
+.eyelid-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg); /* Counter-rotate to negate parent's rotation */
+}
+
+.eyelid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #351518;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform-origin: center top;
+  transform: rotate(-45deg);
+  transform-origin: center top;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes lettleeye {
+  0%,
+  100% {
+    transform: translate(-5%, -5%);
+  }
+  25% {
+    transform: translate(5%, -5%);
+  }
+  50% {
+    transform: translate(5%, 5%);
+  }
+  75% {
+    transform: translate(-5%, 5%);
+  }
+}
+
+@keyframes look-around {
+  0%,
+  100% {
+    transform: translate(-25%, -25%);
+  }
+  25% {
+    transform: translate(25%, -25%);
+  }
+  50% {
+    transform: translate(25%, 25%);
+  }
+  75% {
+    transform: translate(-25%, 25%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  15%,
+  35%,
+  70%,
+  75%,
+  80%,
+  100% {
+    transform: scaleY(0);
+  }
+  5%,
+  30% {
+    transform: scaleY(1);
+  }
+}
+
+/* .eye-container.flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+} */

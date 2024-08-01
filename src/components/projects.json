@@ -4,6 +4,29 @@
     "url": "https://calorie-tracker-xi.vercel.app/",
     "desc": "Developed an calories tracker which provide users with array of tool too manage there calories intake and create diet plan along with that users can log there daily activity, food etc. for better accessing there diet. Also users can subscribe to the premium subscription to get personalized diet plans for there requirements.",
     "small_desc": "Developed an calories tracker which provide users with array of tool too manage there calories intake",
+    "features": [
+      { "name": "User Authentication", "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify." },
+      {
+        "name": "User Profiles",
+        "detail": "Users have customizable profiles displaying their favorite lists, albums, recently played tracks, and added playlists. Profiles can be followed by other users, creating a network of music enthusiasts. Users can update their profile information, including name and personal details."
+      },
+      {
+        "name": "Social Interactions",
+        "detail": "Users can comment on songs, albums, and playlists, fostering discussions and sharing opinions. Users can rate songs and artists, contributing to the community's collective preferences. A feed section shows the latest activities of followed users, such as comments, ratings, and song shares. Users can share songs with their followers, similar to Instagram's reel share option."
+      },
+      {
+        "name": "Integration with Spotify",
+        "detail": "Users can see their Spotify playlists and recent tracks directly on the webapp. The app utilizes Spotify API to fetch real-time data, ensuring a seamless integration of Spotify features. Song search functionality is provided, fetching results directly from the Spotify API."
+      },
+      {
+        "name": "Feed Section",
+        "detail": "A dynamic feed displays activities from followed users, including their comments, ratings, and song shares. Users can interact with the feed by liking or commenting on activities."
+      },
+      {
+        "name": "Song Search",
+        "detail": "Users can search for songs within the webapp. Search results are fetched directly from the Spotify API, ensuring up-to-date and accurate information. Users can search for songs, artists, and other users within the webapp."
+      }
+    ],
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
     "images": [
       "https://portfolio-fiverr-self.vercel.app/cal3.jpg",
@@ -17,6 +40,30 @@
     "url": "https://critiq.se/",
     "desc": "Critiq is a dynamic music-focused social web application that transforms the way users engage with and discover music. With features like song commenting, rating, personalized feeds, music sharing, and user activities, Critiq creates a vibrant community for music enthusiasts. The seamless integration of Spotify through the Spotify API enhances the user experience, providing access to a vast music library.",
     "small_desc": "Critiq is a dynamic music-focused social web application",
+    "features": [
+      { "name": "User Authentication", "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify." },
+      {
+        "name": "User Profiles",
+        "detail": "Users have customizable profiles displaying their favorite lists, albums, recently played tracks, and added playlists. Profiles can be followed by other users, creating a network of music enthusiasts. Users can update their profile information, including name and personal details."
+      },
+      {
+        "name": "Social Interactions",
+        "detail": "Users can comment on songs, albums, and playlists, fostering discussions and sharing opinions. Users can rate songs and artists, contributing to the community's collective preferences. A feed section shows the latest activities of followed users, such as comments, ratings, and song shares. Users can share songs with their followers, similar to Instagram's reel share option."
+      },
+      {
+        "name": "Integration with Spotify",
+        "detail": "Users can see their Spotify playlists and recent tracks directly on the webapp. The app utilizes Spotify API to fetch real-time data, ensuring a seamless integration of Spotify features. Song search functionality is provided, fetching results directly from the Spotify API."
+      },
+      {
+        "name": "Feed Section",
+        "detail": "A dynamic feed displays activities from followed users, including their comments, ratings, and song shares. Users can interact with the feed by liking or commenting on activities."
+      },
+      {
+        "name": "Song Search",
+        "detail": "Users can search for songs within the webapp. Search results are fetched directly from the Spotify API, ensuring up-to-date and accurate information. Users can search for songs, artists, and other users within the webapp."
+      }
+    ],
+
     "tech_stack": ["React", "Django", "Django DRF", "PostgreSQL"],
     "images": ["./crtiq_1.jpeg", "./crtiq_2.jpeg", "./crtiq_3.jpeg", "./crtiq_4.jpeg"]
   },
@@ -25,6 +72,29 @@
     "url": "https://calorie-tracker-xi.vercel.app/",
     "desc": "Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.",
     "small_desc": "E-merch store for and idependent artist",
+    "features": [
+      { "name": "User Authentication", "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify." },
+      {
+        "name": "User Profiles",
+        "detail": "Users have customizable profiles displaying their favorite lists, albums, recently played tracks, and added playlists. Profiles can be followed by other users, creating a network of music enthusiasts. Users can update their profile information, including name and personal details."
+      },
+      {
+        "name": "Social Interactions",
+        "detail": "Users can comment on songs, albums, and playlists, fostering discussions and sharing opinions. Users can rate songs and artists, contributing to the community's collective preferences. A feed section shows the latest activities of followed users, such as comments, ratings, and song shares. Users can share songs with their followers, similar to Instagram's reel share option."
+      },
+      {
+        "name": "Integration with Spotify",
+        "detail": "Users can see their Spotify playlists and recent tracks directly on the webapp. The app utilizes Spotify API to fetch real-time data, ensuring a seamless integration of Spotify features. Song search functionality is provided, fetching results directly from the Spotify API."
+      },
+      {
+        "name": "Feed Section",
+        "detail": "A dynamic feed displays activities from followed users, including their comments, ratings, and song shares. Users can interact with the feed by liking or commenting on activities."
+      },
+      {
+        "name": "Song Search",
+        "detail": "Users can search for songs within the webapp. Search results are fetched directly from the Spotify API, ensuring up-to-date and accurate information. Users can search for songs, artists, and other users within the webapp."
+      }
+    ],
     "tech_stack": ["React", "Email JS", "PHP", "MySQL"],
     "images": [
       "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
@@ -38,6 +108,29 @@
     "url": "https://calorie-tracker-xi.vercel.app/",
     "desc": "Introducing CarbonTrack, your personal carbon emissions tracker. Easily input your monthly and yearly activities, from transportation to energy usage and diet. CarbonTrack provides comprehensive analysis, breaking down emissions by category and presenting data through intuitive charts and graphs. Set customizable reduction goals and receive insightful tips for greener living. With CarbonTrack, monitoring and managing your carbon footprint is simple and secure.",
     "small_desc": "CarbonTrack, your personal carbon emissions tracker",
+    "features": [
+      { "name": "User Authentication", "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify." },
+      {
+        "name": "User Profiles",
+        "detail": "Users have customizable profiles displaying their favorite lists, albums, recently played tracks, and added playlists. Profiles can be followed by other users, creating a network of music enthusiasts. Users can update their profile information, including name and personal details."
+      },
+      {
+        "name": "Social Interactions",
+        "detail": "Users can comment on songs, albums, and playlists, fostering discussions and sharing opinions. Users can rate songs and artists, contributing to the community's collective preferences. A feed section shows the latest activities of followed users, such as comments, ratings, and song shares. Users can share songs with their followers, similar to Instagram's reel share option."
+      },
+      {
+        "name": "Integration with Spotify",
+        "detail": "Users can see their Spotify playlists and recent tracks directly on the webapp. The app utilizes Spotify API to fetch real-time data, ensuring a seamless integration of Spotify features. Song search functionality is provided, fetching results directly from the Spotify API."
+      },
+      {
+        "name": "Feed Section",
+        "detail": "A dynamic feed displays activities from followed users, including their comments, ratings, and song shares. Users can interact with the feed by liking or commenting on activities."
+      },
+      {
+        "name": "Song Search",
+        "detail": "Users can search for songs within the webapp. Search results are fetched directly from the Spotify API, ensuring up-to-date and accurate information. Users can search for songs, artists, and other users within the webapp."
+      }
+    ],
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
     "images": [
       "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
@@ -47,16 +140,78 @@
     ]
   },
   {
-    "name": "CarbonTrack",
+    "name": "LPC Invest",
     "url": "https://calorie-tracker-xi.vercel.app/",
-    "desc": "Introducing CarbonTrack, your personal carbon emissions tracker. Easily input your monthly and yearly activities, from transportation to energy usage and diet. CarbonTrack provides comprehensive analysis, breaking down emissions by category and presenting data through intuitive charts and graphs. Set customizable reduction goals and receive insightful tips for greener living. With CarbonTrack, monitoring and managing your carbon footprint is simple and secure.",
-    "small_desc": "CarbonTrack, your personal carbon emissions tracker",
-    "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "desc": "LPC Invest is an innovative property investment company based in Manchester, boasting a portfolio of brand-new or recently completed properties. The project involves the development of a fully customized website designed to manage property listings, user interactions, blogs, calculators, city guides, and construction updates. Additionally, the project includes a comprehensive lead management dashboard integrated with Pipedrive and RingCentral for enhanced communication and streamlined processes.",
+    "small_desc": "Real-estate Brokerage Company based in Manchester, UK ",
+    "features": [
+      {
+        "name": "User Authentication / Profile Management",
+        "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify."
+      },
+      {
+        "name": "User Preferences",
+        "detail": "Users can save favorite properties and access exclusive property listings and offers."
+      },
+      {
+        "name": "Property Listings",
+        "detail": "Extensive property listings with advanced filters, sorting options, and search functionality. Detailed property pages featuring comprehensive views, favorite options, exclusive tags, and integrated Google Maps to show nearby properties."
+      },
+      {
+        "name": "Blogs",
+        "detail": "Dynamic blog section with a rich text editor in the admin panel for creating and managing content."
+      },
+      {
+        "name": "Calculators",
+        "detail": "Mortgage calculator to help users estimate their loan repayments. Stamp duty calculator to assist users in calculating the stamp duty tax on property purchases."
+      },
+      {
+        "name": "City Guide",
+        "detail": "Dynamic city guide enabling the upload of PDFs, images, and text about various cities."
+      },
+      {
+        "name": "Construction Updates",
+        "detail": "Regular updates on ongoing construction projects, including images and videos."
+      },
+      {
+        "name": "Static Pages and FAQs",
+        "detail": "ROver 20 static informational pages. FAQs page to address common queries. Lead Dashboard"
+      },
+      {
+        "name": "Lead Capturing and Storage",
+        "detail": "Capturing leads from website forms, landing pages, mailers, and paid ads. Storing leads in the database and integrating with Pipedrive via APIs."
+      },
+      {
+        "name": "Lead Management",
+        "detail": "Custom dashboard for managing leads from various sources such as Facebook ads and other platforms. Advanced filtering options to organize and manage leads effectively."
+      },
+      {
+        "name": "Pipedrive Automation",
+        "detail": "Capturing leads using Pipedrive APIs. Automated person profile creation and lead filtering by source (mailer, ad, main website). Managed leads for both Manchester and Liverpool branches. Creation of custom fields in Pipedrive using APIs."
+      },
+      {
+        "name": "RingCentral Integration",
+        "detail": "Communication Enhancement:Integrated RingCentral APIs and Google Apps Script to enhance communication infrastructure. Real-time synchronization of call logs with Excel for efficient tracking and management. Third-Party APIs, APIs used for call log integration and synchronization."
+      },
+      {
+        "name": "Google Maps",
+        "detail": "Integrated to show property locations and nearby amenities."
+      },
+      {
+        "name": "Microsoft Azure 360",
+        "detail": "Integrated for additional services and functionalities."
+      },
+      {
+        "name": "SMTP Mail",
+        "detail": "For sending automated emails and notifications."
+      }
+    ],
+    "tech_stack": ["HTML5", "CSS3", "Bootstrap 5", "AWS EC2", "Ubuntu", "Git", "MySQL"],
     "images": [
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg"
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
     ]
   }
 ]

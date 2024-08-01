@@ -265,3 +265,86 @@
 }
 
 /* Content start */
+
+/* Feature Section */
+.features-section {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 80%, transparent);
+  mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 80%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Feature Card */
+
+.featurecard {
+  border-radius: 2.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 20px;
+  width: 600px;
+  position: relative;
+  height: 400px;
+
+  background-size: 160%;
+  outline: 5px solid #351518;
+  transition: all 0.5s ease-in-out;
+}
+.featurecard p {
+  overflow-y: auto;
+  white-space: wrap;
+}
+
+.featurecard .bottom-star {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  animation: jump 2s ease-in-out infinite;
+}
+.featurecard:nth-child(odd) .bottom-star {
+  animation-delay: 0.5;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 2%;
+  }
+
+  50% {
+    bottom: 5%;
+  }
+  10% {
+    bottom: 2%;
+  }
+}
+
+.featurecard:hover {
+  background-size: 180%;
+  outline: 5px dashed #351518;
+}
+
+.features-section-inner {
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  animation: hscroll 40s linear infinite;
+  animation-play-state: paused;
+}
+
+.features-section.animated > .features-section-inner {
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  animation: hscroll 40s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes hscroll {
+  to {
+    transform: translate(calc(-50% - 1rem));
+  }
+}
