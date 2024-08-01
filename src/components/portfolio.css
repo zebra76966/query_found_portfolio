@@ -133,6 +133,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   animation: slidefadedown 0.8s ease-in-out forwards;
 }
+.portDiv {
+  width: 90%;
+}
 
 @keyframes slidefadedown {
   0% {
@@ -144,5 +147,57 @@
     top: 60%;
     transform: translate(-50%, 60%);
     border-radius: 50px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .custom-card {
+    height: 500px;
+    background-size: 140%;
+  }
+  .custom-card:hover {
+    background-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .custom-card {
+    height: 400px;
+    background-size: 120%;
+  }
+  .custom-card:hover {
+    background-size: 130%;
+  }
+  .portDiv {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .custom-card {
+    height: 300px;
+    background-size: 180%;
+  }
+  .custom-card:hover {
+    background-size: 190%;
+  }
+  .custom-card h3 {
+    font-size: 1.5rem !important;
+  }
+  .custom-card button:not(:nth-child(1)) {
+    font-size: 0.8rem !important;
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container-fluid.portfolio {
+    padding: 0;
+  }
+  .portfolio .tags {
+    background: #e1d8d2;
+    padding-left: 93px !important;
+    white-space: nowrap;
+    overflow: auto;
   }
 }

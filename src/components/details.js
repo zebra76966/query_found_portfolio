@@ -52,18 +52,18 @@ const Details = ({ data, setCurentProj }) => {
       >
         <div className="cotainer-fluid  d-flex align-items-center mb-4 pb-5" style={{ height: "75dvh" }}>
           <div className="row ">
-            <motion.div className="col-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+            <motion.div className="col-lg-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <div className="w-100 txtcolor-secondary">
                 <h1 className="display-1 py-3 fw-bold">{data.name}</h1>
                 <p className="display-5 mt-4">{data.small_desc}</p>
               </div>
             </motion.div>
 
-            <motion.div className="col-md-4 mt-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <motion.div className="col-lg-4 mt-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <img src={data.images[0]} className="roundedimg shadow" />
             </motion.div>
 
-            <div className="col-md-6 text-start mt-5 pt-5 ">
+            <div className="col-lg-6 text-start mt-5 pt-5 ">
               <div className="w-100 d-flex justify-content-between">
                 <a href={data.url} target="_blank" className="btn btn-lg fs-3 p-3 px-5 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border">
                   <span className="me-2"> Visit Website </span>
@@ -78,7 +78,7 @@ const Details = ({ data, setCurentProj }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-6 text-end mt-5 pt-5">
+            <div className="col-lg-6 text-end mt-5 pt-5">
               <div className="w-75 ms-auto">
                 {data.tech_stack.map((ini) => {
                   return <button className="btn btn-lg bgcolor-plain txtcolor-secondary me-2 rounded-pill border border-1 secondary-border mb-1">{ini}</button>;
@@ -101,10 +101,10 @@ const Details = ({ data, setCurentProj }) => {
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="col-6 my-5 ">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="col-md-6 my-5 ">
               <img src={data.images[1]} className="roundedimg bodyimg shadow" />
             </motion.div>
-            <motion.div className="col-6 my-5" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <motion.div className="col-md-6 my-5" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <img src={data.images[2]} className="roundedimg bodyimg shadow" />
             </motion.div>
 
@@ -147,10 +147,10 @@ const Details = ({ data, setCurentProj }) => {
               <img src={data.images[3]} className="roundedimg main shadow" />
             </motion.div>
 
-            <motion.div className="col-6 my-5 pe-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <motion.div className="col-md-6 my-5 pe-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <img src={data.images[1]} className="roundedimg bodyimg shadow" />
             </motion.div>
-            <motion.div className="col-6 my-5 ps-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
+            <motion.div className="col-md-6 my-5 ps-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
               <img src={data.images[2]} className="roundedimg bodyimg shadow" />
             </motion.div>
 
