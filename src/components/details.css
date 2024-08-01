@@ -294,7 +294,7 @@
 }
 .featurecard p {
   overflow-y: auto;
-  white-space: wrap;
+  max-height: 300px;
 }
 
 .featurecard .bottom-star {
@@ -346,5 +346,250 @@
 @keyframes hscroll {
   to {
     transform: translate(calc(-50% - 1rem));
+  }
+}
+
+/* Eye Animation */
+.eye-container {
+  width: 200px;
+  height: 200px;
+  background-color: #351518;
+  border-radius: 75% 0%;
+  padding: 2px 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+}
+
+.eye {
+  width: 100px;
+  height: 100px;
+  background-color: #e1d8d2;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  animation: 4s lettleeye infinite;
+}
+
+.eye:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  background-color: #351518;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  animation: 4s look-around infinite;
+}
+
+.eyelid-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg); /* Counter-rotate to negate parent's rotation */
+}
+
+.eyelid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #351518;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform-origin: center top;
+  transform: rotate(-45deg);
+  transform-origin: center top;
+  animation: blink 4s linear infinite;
+}
+
+@keyframes lettleeye {
+  0%,
+  100% {
+    transform: translate(-5%, -5%);
+  }
+  25% {
+    transform: translate(5%, -5%);
+  }
+  50% {
+    transform: translate(5%, 5%);
+  }
+  75% {
+    transform: translate(-5%, 5%);
+  }
+}
+
+@keyframes look-around {
+  0%,
+  100% {
+    transform: translate(-25%, -25%);
+  }
+  25% {
+    transform: translate(25%, -25%);
+  }
+  50% {
+    transform: translate(25%, 25%);
+  }
+  75% {
+    transform: translate(-25%, 25%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  15%,
+  35%,
+  70%,
+  75%,
+  80%,
+  100% {
+    transform: scaleY(0);
+  }
+  5%,
+  30% {
+    transform: scaleY(1);
+  }
+}
+
+/* .eye-container.flip {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+} */
+
+.topBar {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .roundedimg {
+    border-radius: 30px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .roundedimg.main {
+    border-radius: 50px;
+    width: 100%;
+    height: 400px;
+  }
+  .roundedimg.bodyimg {
+    border-radius: 50px;
+    width: 100%;
+    height: 400px;
+  }
+  .featurecard {
+    padding: 20px;
+    width: 450px;
+    height: 350px;
+  }
+  .featurecard p {
+    overflow-y: auto;
+    max-height: 190px;
+  }
+
+  .eye-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .eye {
+    width: 75px;
+    height: 75px;
+  }
+  .get-in-touch {
+    font-size: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .eye-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .eye {
+    width: 60px;
+    height: 60px;
+  }
+
+  .roundedimg {
+    border-radius: 30px;
+    width: 100%;
+    height: 250px;
+  }
+
+  .roundedimg.main {
+    border-radius: 50px;
+    width: 100%;
+    height: 300px;
+  }
+  .roundedimg.bodyimg {
+    border-radius: 50px;
+    width: 100%;
+    height: 250px;
+  }
+  .featurecard {
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+  }
+  .featurecard p {
+    overflow-y: auto;
+    max-height: 240px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .topBar {
+    width: 100%;
+  }
+  .eye-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .eye {
+    width: 50px;
+    height: 50px;
+  }
+
+  .roundedimg {
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .roundedimg.main {
+    border-radius: 25px;
+    width: 100%;
+    height: 250px;
+  }
+  .roundedimg.bodyimg {
+    border-radius: 25px;
+    width: 100%;
+    height: 200px;
+  }
+  .featurecard {
+    padding: 20px;
+    width: 250px;
+    height: 280px;
+  }
+  .featurecard h1 {
+    font-size: 22px;
+  }
+  .featurecard p {
+    overflow-y: auto;
+    max-height: 130px;
+    font-size: 80%;
+  }
+  .features-section-inner {
+    gap: 1rem !important;
+  }
+  .bottom-star {
+    right: 8% !important;
   }
 }
