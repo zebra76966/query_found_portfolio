@@ -196,7 +196,7 @@
   }
   .portfolio .tags {
     background: #e1d8d2;
-    padding-left: 93px !important;
+    /* padding-left: 93px !important; */
     white-space: nowrap;
     overflow: auto;
   }

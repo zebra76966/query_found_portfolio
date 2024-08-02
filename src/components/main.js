@@ -63,10 +63,22 @@ const Main = () => {
           <h2 className="display-5 ">Loading...</h2>
         </div>
       </div>
+      {mobile && (
+        <div className="logo-box">
+          <img src="./logo2.gif" />
+        </div>
+      )}
 
       <div className={`${mobile ? "" : "hero"} d-flex align-items-center justify-content-center`}>
         <div className="row w-100">
-          <motion.div className={`${mobile ? "" : "col-lg-1"} mobileBar`} initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }}>
+          <motion.div
+            className={`${mobile ? "" : "col-lg-1"} mobileBar bgcolor-plain ${mobile ? "shadow-lg roundedTopBar" : ""}`}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
             <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} />
 
             {!mobile && (
