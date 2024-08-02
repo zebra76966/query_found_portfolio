@@ -810,7 +810,7 @@ hr {
   position: fixed;
   z-index: 9999999;
   background-color: #351518;
-  animation: shrinkUp 2s ease-in forwards;
+  animation: shrinkUp 2.9 ease-in forwards;
   top: 0;
   left: 0;
   color: #ee9747;
@@ -821,6 +821,7 @@ hr {
   0% {
     height: 100dvh;
   }
+
   70% {
     height: 0dvh;
     display: none;
