@@ -43,7 +43,7 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
               <img src="./icons/home_a.svg" />
             </a>
             <a
-              href="#"
+              href="/projects"
               className={`mx-auto mt-4 mb-4 rounded-circle ${active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
@@ -119,7 +119,7 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
             </a>
 
             <a
-              href="#"
+              href="/projects"
               className={`mx-auto mt-4 mb-4 rounded-circle ${active == "assets" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
