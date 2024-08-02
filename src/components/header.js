@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = ({ mobile, setFolio, setCurentProj }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
-  const [closeActive, setCloseActive] = useState(true);
+
+  useEffect(() => {
+    if (window.location.pathname.includes("/projects")) {
+      setFolio(true);
+      setActive("assets");
+    } else {
+      setFolio(false);
+      setActive("home");
+    }
+  }, []);
 
   return (
     <>

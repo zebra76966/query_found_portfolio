@@ -19,6 +19,14 @@ const Main = () => {
   const [activeProj, setCurentProj] = useState(0);
 
   useEffect(() => {
+    if (window.location.pathname.includes("/projects")) {
+      setFolio(true);
+    } else {
+      setFolio(false);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       setMobile(window.innerWidth < 1400);
     };
