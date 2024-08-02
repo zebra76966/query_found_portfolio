@@ -21,10 +21,10 @@ const Details = ({ data, setCurentProj }) => {
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <div
-          className="p-3 ps-lg-3 ps-5 bgcolor-plain d-md-flex align-items-center justify-content-between text-lg-auto text-end position-sticky top-0 start-0"
+          className="p-md-3 p-4 ps-lg-3 ps-3 bgcolor-plain d-md-flex align-items-center justify-content-between text-lg-auto text-end position-sticky top-0 start-0"
           style={{ zIndex: "99", width: "90%", borderRadius: "0 0 20px 20px" }}
         >
-          <div className="d-flex align-items-center justify-content-md-start justify-content-end topBar ps-md-0 ps-4">
+          <div className="d-flex align-items-center justify-content-lg-start justify-content-end topBar ps-md-0 ps-4">
             <button
               onClick={() => {
                 setCurentProj(0);
@@ -47,11 +47,11 @@ const Details = ({ data, setCurentProj }) => {
         </div>
       </motion.div>
       <motion.div className="ms-auto pe-3 pt-2  ps-0 position-relative portDiv" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
-        <div className="cotainer-fluid  d-flex align-items-center mb-4 pb-5" style={{ height: "75dvh" }}>
+        <div className="cotainer-fluid  d-flex align-items-center mb-4 pb-5 detHero">
           <div className="row ">
             <motion.div className="col-lg-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <div className="w-100 txtcolor-secondary">
-                <h1 className="display-1 pt-lg-3 pb-3 pt-5 mt-lg-0 mt-5  fw-bold">{data.name}</h1>
+                <h1 className="display-1 pt-lg-3 pb-3 pt-lg-5 pt-2 mt-lg-0 mt-2  fw-bold">{data.name}</h1>
                 <p className="display-5 mt-4">{data.small_desc}</p>
               </div>
             </motion.div>
@@ -62,7 +62,7 @@ const Details = ({ data, setCurentProj }) => {
 
             <div className="col-lg-6 text-start mt-lg-5 pt-lg-5 pt-3 mt-3">
               <div className="w-100 d-flex justify-content-between">
-                <a href={data.url} target="_blank" className="btn btn-lg fs-3 p-3 px-5 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border">
+                <a href={data.url} target="_blank" className="btn btn-lg fs-3 p-md-3 p-2 px-md-5 px-4 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border">
                   <span className="me-2"> Visit Website </span>
                   <i className="fa fa-external-link-square fs-2"></i>
                 </a>
@@ -76,7 +76,7 @@ const Details = ({ data, setCurentProj }) => {
               </div>
             </div>
             <div className="col-lg-6 text-lg-end mt-lg-5 pt-lg-5 pt-3 mt-3">
-              <div className="w-75 ms-lg-auto">
+              <div className="techStack ms-lg-auto">
                 {data.tech_stack.map((ini) => {
                   return <button className="btn btn-lg bgcolor-plain txtcolor-secondary me-2 rounded-pill border border-1 secondary-border mb-1">{ini}</button>;
                 })}
@@ -175,7 +175,7 @@ const Details = ({ data, setCurentProj }) => {
                 </h1>
 
                 <div className="text-center w-100 my-4 py-5">
-                  <button target="_blank" className="btn fs-4 p-4 px-5 bgcolor-secondary txtcolor-plain rounded-pill border border-1 secondary-border mx-auto ">
+                  <button target="_blank" className="btn fs-4 p-md-4 p-3 px-md-5 px-4 bgcolor-secondary txtcolor-plain rounded-pill border border-1 secondary-border mx-auto ">
                     <div className="pulse"></div>
                     <div className="pulse"></div>
                     <div className="pulse"></div>

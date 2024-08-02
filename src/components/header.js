@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Header = ({ mobile, setFolio, setCurentProj }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
+  const [closeActive, setCloseActive] = useState(true);
 
   return (
     <>
@@ -76,14 +77,18 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
       )}
 
       {mobile && (
-        <div class={`mobileSidenav ${mobileActive ? "active" : "inactive"}  ${active == "home" ? "hnav1" : active == "assets" ? "hnav2" : "hnav3"} d-flex flex-column rounded-pill p-2 px-3`}>
+        <div
+          class={`mobileSidenav ${mobileActive ? "active" : "inactive"}  ${
+            active == "home" || !mobileActive ? "hnav1" : active == "assets" && mobileActive ? "hnav2" : "hnav3"
+          } d-flex flex-column rounded-pill p-2 px-3`}
+        >
           <div class="flex-column mb-auto pt-2 ">
             <a
               href="#"
               className="mx-auto mb-4 rounded-circle bgcolor-primary d-flex align-items-center justify-content-center"
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
-                setActive("home");
+                // setActive("home");
                 setMobileAactive(!mobileActive);
               }}
             >
@@ -98,6 +103,7 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
               onClick={() => {
                 setActive("home");
                 setFolio(false);
+                setMobileAactive(false);
               }}
             >
               <img src="./icons/home_a.svg" />
@@ -105,11 +111,13 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
 
             <a
               href="#"
-              className={`mx-auto mt-4 mb-4 rounded-circle ${active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
+              className={`mx-auto mt-4 mb-4 rounded-circle ${active == "assets" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("assets");
                 setFolio(true);
+                setCurentProj(0);
+                setMobileAactive(false);
               }}
             >
               {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}
@@ -121,6 +129,7 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
               onClick={() => {
                 setActive("about");
                 setFolio(false);
+                setMobileAactive(false);
               }}
             >
               {active == "about" ? <img src="./icons/doc_a.svg" className="ms-1" /> : <img src="./icons/doc_b.svg" className="ms-1" />}

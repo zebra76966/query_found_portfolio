@@ -463,6 +463,9 @@
 .topBar {
   width: 50%;
 }
+.detHero {
+  height: 75dvh;
+}
 
 @media only screen and (max-width: 1200px) {
   .roundedimg {
@@ -503,9 +506,19 @@
   .get-in-touch {
     font-size: 20px !important;
   }
+
+  .topBar {
+    width: 30%;
+  }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 900px) {
+  .topBar {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .eye-container {
     width: 120px;
     height: 120px;
@@ -540,6 +553,15 @@
   .featurecard p {
     overflow-y: auto;
     max-height: 240px;
+  }
+  .get-in-touch {
+    display: none;
+  }
+  .topBar {
+    width: 100%;
+  }
+  .detHero {
+    height: 100%;
   }
 }
 
@@ -591,5 +613,26 @@
   }
   .bottom-star {
     right: 8% !important;
+  }
+  .features-section {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 95%, transparent);
+    mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 95%, transparent);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .dets {
+    padding: 0;
+  }
+  .portDiv {
+    padding-right: var(--bs-gutter-x, 0.75rem) !important;
+    padding-left: var(--bs-gutter-x, 0.75rem) !important;
+  }
+  .topBar {
+    transform: scale(0.8);
+    transform-origin: right;
   }
 }
