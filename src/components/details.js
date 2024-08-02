@@ -24,7 +24,7 @@ const Details = ({ data, setCurentProj }) => {
           className="p-md-3 p-4 ps-lg-3 ps-3 bgcolor-plain d-md-flex align-items-center justify-content-between text-lg-auto text-end position-sticky top-0 start-0"
           style={{ zIndex: "99", width: "90%", borderRadius: "0 0 20px 20px" }}
         >
-          <div className="d-flex align-items-center justify-content-lg-start justify-content-end topBar ps-md-0 ps-4">
+          <div className="d-flex align-items-center justify-content-lg-start justify-content-end topBar ps-md-0 ps-1">
             <button
               onClick={() => {
                 setCurentProj(0);
