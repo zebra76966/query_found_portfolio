@@ -271,8 +271,8 @@
   width: 100%;
   padding: 10px;
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 80%, transparent);
-  mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
+  mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
   display: flex;
   flex-wrap: wrap;
 }
@@ -618,8 +618,8 @@
     width: 100%;
     padding: 10px;
     overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 95%, transparent);
-    mask: linear-gradient(90deg, transparent, #e1d8d2 0%, #e1d8d2 95%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 95%, transparent);
+    mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 95%, transparent);
     display: flex;
     flex-wrap: wrap;
   }
