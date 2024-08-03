@@ -11,7 +11,7 @@ const fadeUpVariants = {
 
 const Portfolio = ({ setCurentProj }) => {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="ms-auto pe-md-3 pt-md-5 pt-2 ps-0 portDiv">
+    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="ms-auto pe-md-3 pt-md-5 pt-2 ps-0 portDiv mb-5 pb-5">
       <div className="p-md-0 p-3">
         <h1 className="display-1  pt-xxl-3 pb-md-3 pt-2 pb-3 fw-bold txtcolor-secondary">Projects / Case Studies</h1>
 
@@ -33,17 +33,14 @@ const Portfolio = ({ setCurentProj }) => {
           {datas.map((ini, i) => {
             return (
               <div className="col-xxl-6 px-md-4 px-1 py-lg-4 py-3" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.2 }}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                <div
                   className="w-100"
                   onClick={() => {
                     setCurentProj(i + 1);
                   }}
                 >
                   <Card data={ini} />
-                </motion.div>
+                </div>
               </div>
             );
           })}

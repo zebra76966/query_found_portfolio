@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -33,7 +33,7 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -91,13 +91,13 @@
 }
 
 .btn.bgcolor-secondary:hover {
-  color: #ee9747;
+  color: #4ecdc4;
 }
 
 /* Aniamtion WUe Scroll Down */
 .scrolldown {
   scale: 1.5;
-  --color: #351518;
+  --color: #292f36;
   --sizeX: 30px;
   --sizeY: 50px;
   position: relative;
@@ -197,7 +197,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  color: #351518;
+  color: #292f36;
 }
 .closeDetBtn:hover {
   scale: 1.05;
@@ -215,7 +215,7 @@
   border-radius: 2rem;
   transform: translate(-50%, -50%);
   position: absolute;
-  border: 2px solid #351518;
+  border: 2px solid #292f36;
   animation: clickMe 2s ease-in-out infinite;
 }
 .get-in-touch .pulse:nth-child(2)::before {
@@ -227,7 +227,7 @@
   border-radius: 2rem;
   transform: translate(-50%, -50%);
   position: absolute;
-  border: 2px solid #351518;
+  border: 2px solid #292f36;
   animation: clickMe 2s ease-in-out 0.4s infinite;
 }
 .get-in-touch .pulse:nth-child(3)::before {
@@ -248,19 +248,19 @@
     width: 100%;
     height: 100%;
     border-radius: 2rem;
-    border: 3px solid #351518;
+    border: 3px solid #292f36;
   }
   50% {
     width: 115%;
     height: 125%;
     border-radius: 2.5rem;
-    border: 2px solid #351518;
+    border: 2px solid #292f36;
   }
   100% {
     width: 120%;
     height: 130%;
     border-radius: 3rem;
-    border: 1px solid #35151800;
+    border: 1px solid #292f3600;
   }
 }
 
@@ -271,8 +271,8 @@
   width: 100%;
   padding: 10px;
   overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
-  mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, #f7fff7 0.1%, #f7fff7 80%, transparent);
+  mask: linear-gradient(90deg, transparent, #f7fff7 0.1%, #f7fff7 80%, transparent);
   display: flex;
   flex-wrap: wrap;
 }
@@ -289,7 +289,7 @@
   height: 400px;
 
   background-size: 160%;
-  outline: 5px solid #351518;
+  outline: 5px solid #292f36;
   transition: all 0.5s ease-in-out;
 }
 .featurecard p {
@@ -322,7 +322,7 @@
 
 .featurecard:hover {
   background-size: 180%;
-  outline: 5px dashed #351518;
+  outline: 5px dashed #292f36;
 }
 
 .features-section-inner {
@@ -353,7 +353,7 @@
 .eye-container {
   width: 200px;
   height: 200px;
-  background-color: #351518;
+  background-color: #292f36;
   border-radius: 75% 0%;
   padding: 2px 5px;
   position: relative;
@@ -366,7 +366,7 @@
 .eye {
   width: 100px;
   height: 100px;
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
@@ -378,7 +378,7 @@
   display: block;
   width: 50%;
   height: 50%;
-  background-color: #351518;
+  background-color: #292f36;
   border-radius: 50%;
   position: absolute;
   top: 25%;
@@ -397,7 +397,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #351518;
+  background-color: #292f36;
   top: 0;
   left: 0;
   border-radius: 50%;
@@ -552,7 +552,7 @@
   }
   .featurecard p {
     overflow-y: auto;
-    max-height: 240px;
+    max-height: 180px;
   }
   .get-in-touch {
     display: none;
@@ -618,8 +618,8 @@
     width: 100%;
     padding: 10px;
     overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 95%, transparent);
-    mask: linear-gradient(90deg, transparent, #e1d8d2 0.1%, #e1d8d2 95%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, #f7fff7 0.1%, #f7fff7 95%, transparent);
+    mask: linear-gradient(90deg, transparent, #f7fff7 0.1%, #f7fff7 95%, transparent);
     display: flex;
     flex-wrap: wrap;
   }
@@ -635,4 +635,21 @@
     transform: scale(0.8);
     transform-origin: right;
   }
+}
+
+.detailsVideo {
+  position: absolute;
+  transform: scale(0.6) translate(-50%, -50%);
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 9;
+}
+
+.detailsVideoWrapper {
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 30px;
+}
+
+.detailsVideoWrapper img {
+  opacity: 0.8;
 }

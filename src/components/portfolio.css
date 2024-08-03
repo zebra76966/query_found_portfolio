@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -33,7 +33,7 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -59,7 +59,7 @@
 .dets .tags {
   position: sticky;
   top: -1%;
-  background: #e1d8d2;
+  background: #f7fff7;
   left: 0;
   z-index: 100;
 }
@@ -78,7 +78,7 @@
 
 .custom-card:hover {
   background-size: 180%;
-  outline: 5px dashed #351518;
+  outline: 5px dashed #292f36;
 }
 
 .custom-card .card-text {
@@ -96,7 +96,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -125,7 +125,7 @@
   left: 50%;
 
   transform: translate(-50%, -50%);
-  background-color: #e1d8d2;
+  background-color: #f7fff7;
   z-index: 99;
   height: 100dvh;
   width: 100dvw;
@@ -195,7 +195,7 @@
     padding: 0;
   }
   .portfolio .tags {
-    background: #e1d8d2;
+    background: #f7fff7;
     /* padding-left: 93px !important; */
     white-space: nowrap;
     overflow: auto;

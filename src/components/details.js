@@ -57,7 +57,21 @@ const Details = ({ data, setCurentProj }) => {
             </motion.div>
 
             <motion.div className="col-lg-4 mt-4" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
-              <img src={data.images[0]} className="roundedimg shadow" />
+              <div className="detailsVideoWrapper position-relative">
+                <img src={data.images[0]} className="roundedimg shadow " />
+
+                <div className=" position-absolute detailsVideo">
+                  <div class="loader2">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="svg">
+                      <img src="./icons/play.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
             <div className="col-lg-6 text-start mt-lg-5 pt-lg-5 pt-3 mt-3">
