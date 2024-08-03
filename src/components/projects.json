@@ -65,7 +65,7 @@
     ],
 
     "tech_stack": ["React", "Django", "Django DRF", "PostgreSQL"],
-    "images": ["./crtiq_1.jpeg", "./crtiq_2.jpeg", "./crtiq_3.jpeg", "./crtiq_4.jpeg"]
+    "images": ["./crtiq_4.jpeg", "./crtiq_2.jpeg", "./crtiq_3.jpeg", "./crtiq_1.jpeg"]
   },
   {
     "name": "Art Merch Store",
