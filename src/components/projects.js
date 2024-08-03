@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-
+import datas from "./projects.json";
 const Project = ({ mobile }) => {
   const [enlarge, setEnlarge] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -75,64 +75,55 @@ const Project = ({ mobile }) => {
               <div id="carouselExampleInterval" className="carousel slide" data-bs-interval="false">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="https://portfolio-fiverr-self.vercel.app/artstore.jpg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[0].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
 
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[0].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[0].small_desc}</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src="https://portfolio-fiverr-self.vercel.app/carbon.jpeg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[1].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[1].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[1].small_desc}</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src="https://portfolio-fiverr-self.vercel.app/cal1.jpg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[2].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[2].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[2].small_desc}</p>
                     </div>
                   </div>
                 </div>
@@ -258,64 +249,55 @@ const Project = ({ mobile }) => {
               <div id="carouselExampleInterval" className="carousel slide" data-bs-interval="false">
                 <div className="carousel-inner">
                   <div className="carousel-item active">
-                    <img src="https://portfolio-fiverr-self.vercel.app/artstore.jpg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[0].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
 
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[0].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[0].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[0].small_desc}</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src="https://portfolio-fiverr-self.vercel.app/carbon.jpeg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[1].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[2].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[1].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[1].small_desc}</p>
                     </div>
                   </div>
                   <div className="carousel-item">
-                    <img src="https://portfolio-fiverr-self.vercel.app/cal1.jpg" className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
+                    <img src={datas[2].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">Art Merch Store</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[2].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
                       </div>
 
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">React JS</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Django</button>
-                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">Email Js</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[0]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[1]}</button>
+                      <button className="btn-sm txtcolor-primary primary-border border-1 border rounded-pill bgcolor-secondary me-2">{datas[2].tech_stack[3]}</button>
 
-                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>
-                        Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the
-                        order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.
-                      </p>
+                      <p className={`txtcolor-primary mt-3 ${enlarge ? "viewText thinScroll" : "textShrink"}`}>{datas[2].small_desc}</p>
                     </div>
                   </div>
                 </div>
