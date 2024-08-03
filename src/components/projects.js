@@ -193,7 +193,7 @@ const Project = ({ mobile }) => {
 
             <div className="carousel-right ps-4 h-100">
               <h2
-                className={`fw-bold list-slider txtcolor-primary display-6 ${activeTab !== 0 ? "opacity-50" : ""}`}
+                className={`fw-bold list-slider txtcolor-primary display-6 text-uppercase ${activeTab !== 0 ? "opacity-50" : ""}`}
                 data-bs-target="#carouselExampleInterval"
                 data-bs-slide-to="0"
                 onClick={() => {
@@ -201,11 +201,11 @@ const Project = ({ mobile }) => {
                   setActiveTab(0);
                 }}
               >
-                • ART MERCH STORE
+                • {datas[0].name}
               </h2>
               <div className={`border-start border-2 primary-border ${activeTab == 0 ? "mh-auto" : "mh-0"} `}></div>
               <h2
-                className={`fw-bold list-slider txtcolor-primary display-6 ${activeTab !== 1 ? "opacity-50" : ""}`}
+                className={`fw-bold list-slider txtcolor-primary display-6 text-uppercase ${activeTab !== 1 ? "opacity-50" : ""}`}
                 data-bs-target="#carouselExampleInterval"
                 data-bs-slide-to="1"
                 onClick={() => {
@@ -213,11 +213,11 @@ const Project = ({ mobile }) => {
                   setActiveTab(1);
                 }}
               >
-                • CALORIES TRACKER
+                • {datas[1].name}
               </h2>
               <div className={`border-start border-2 primary-border ${activeTab == 1 ? "mh-auto" : "mh-0"} ${activeTab == 1 - 1 ? "mh-auto-off" : ""}`}></div>
               <h2
-                className={`fw-bold list-slider txtcolor-primary display-6 ${activeTab !== 2 ? "opacity-50" : ""}`}
+                className={`fw-bold list-slider txtcolor-primary display-6 text-uppercase ${activeTab !== 2 ? "opacity-50" : ""}`}
                 data-bs-target="#carouselExampleInterval"
                 data-bs-slide-to="2"
                 onClick={() => {
@@ -225,7 +225,7 @@ const Project = ({ mobile }) => {
                   setActiveTab(2);
                 }}
               >
-                • CARBON FOOTPRINT
+                • {datas[2].name}
               </h2>
               <div className={`border-start border-2 primary-border ${activeTab == 2 ? "mh-auto" : "mh-0"}  ${activeTab == 2 - 1 ? "mh-auto-off" : ""}`}></div>
             </div>
@@ -270,7 +270,7 @@ const Project = ({ mobile }) => {
                     <img src={datas[1].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[2].name}</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[1].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>

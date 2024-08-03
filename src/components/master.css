@@ -650,7 +650,7 @@ hr {
 }
 
 .mobile .carousel-item img {
-  max-height: 450px;
+  height: 450px;
   object-fit: cover;
 }
 
