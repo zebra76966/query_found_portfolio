@@ -636,3 +636,19 @@
     transform-origin: right;
   }
 }
+.detailsVideo {
+  position: absolute;
+  transform: scale(0.6) translate(-50%, -50%);
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 9;
+}
+
+.detailsVideoWrapper {
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 30px;
+}
+
+.detailsVideoWrapper img {
+  opacity: 0.8;
+}
