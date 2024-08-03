@@ -649,8 +649,8 @@ hr {
   animation: opacity 0.7s ease-in-out 0.3s forwards;
 }
 
-.mobile .carousel-item img {
-  max-height: 450px;
+.mobile .carousel-item > img {
+  height: 450px;
   object-fit: cover;
 }
 
