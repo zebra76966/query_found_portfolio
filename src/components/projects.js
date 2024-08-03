@@ -270,7 +270,7 @@ const Project = ({ mobile }) => {
                     <img src={datas[1].images[0]} className="d-block w-100 border border-2 p-2 primary-border " style={{ borderRadius: "44px" }} alt="..." />
                     <div className="detail-block ps-4">
                       <div className="text-block d-flex align-items-center mt-4 mb-2">
-                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[2].name}</h6>
+                        <h6 className="txtcolor-primary fw-bold   mb-0">{datas[1].name}</h6>
                         <button className="p-3 icon-project-arrow-sm border-0 ms-2">
                           <img src="./icons/arrow-right-sm.svg" />
                         </button>
