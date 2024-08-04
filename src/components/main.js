@@ -77,7 +77,7 @@ const Main = () => {
             animate="visible"
             exit="exit"
             variants={fadeUpVariants}
-            transition={{ duration: 0.5, delay: 1 }}
+            transition={{ duration: 0.5, delay: 3 }}
           >
             <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} />
 
