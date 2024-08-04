@@ -13,17 +13,17 @@ const Hero = ({ mobile }) => {
     <>
       {!mobile && (
         <div className="hero-box d-flex align-items-center justify-content-center">
-          <motion.img src="./mascot2.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 }} />
+          <motion.img src="./mascot3.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2 }} />
 
-          <motion.div className="position-absolute top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.8 }}>
+          <motion.div className="position-absolute top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 1.8 }}>
             QUERY-FOUND
           </motion.div>
 
-          <motion.div className="position-absolute left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1.1 }}>
+          <motion.div className="position-absolute left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.1 }}>
             Designers
           </motion.div>
 
-          <motion.div className="position-absolute bottom-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1.5 }}>
+          <motion.div className="position-absolute bottom-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.5 }}>
             Developers
           </motion.div>
 
@@ -35,7 +35,7 @@ const Hero = ({ mobile }) => {
             animate="visible"
             exit="exit"
             variants={fadeUpVariants}
-            transition={{ duration: 0.5, delay: 2 }}
+            transition={{ duration: 0.5, delay: 1 + 3 }}
           >
             <div className="loader2">
               <div className="circle"></div>
@@ -53,23 +53,23 @@ const Hero = ({ mobile }) => {
         <div className="mobile hero-box">
           <div className="bordered-img-box animatedborder">
             <motion.img
-              src={`${mobile ? "./mascot2.png" : "./hero.png"}`}
+              src={`${mobile ? "./mascot3.png" : "./hero.png"}`}
               className="hero-img"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={fadeUpVariants}
-              transition={{ duration: 0.5, delay: 1 }}
+              transition={{ duration: 0.5, delay: 1 + 2 }}
             />
           </div>
 
-          <motion.div className="position-absolute mobile top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 0.8 }}>
+          <motion.div className="position-absolute mobile top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 0.8 }}>
             QUERY<span className="d-block">FOUND</span>
           </motion.div>
-          <motion.div className="position-absolute mobile left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1.1 }}>
+          <motion.div className="position-absolute mobile left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.1 }}>
             Developers
           </motion.div>
-          <motion.div className="position-absolute mobile bottom-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1.5 }}>
+          <motion.div className="position-absolute mobile bottom-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.5 }}>
             Designers
           </motion.div>
 
@@ -81,7 +81,7 @@ const Hero = ({ mobile }) => {
             animate="visible"
             exit="exit"
             variants={fadeUpVariants}
-            transition={{ duration: 0.5, delay: 2 }}
+            transition={{ duration: 0.5, delay: 1 + 3 }}
           >
             <div class="loader2">
               <div class="circle"></div>
@@ -94,7 +94,7 @@ const Hero = ({ mobile }) => {
             </div>
           </motion.div>
 
-          <motion.div className="position-absolute mobile left-socials" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 2 }}>
+          <motion.div className="position-absolute mobile left-socials" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 3 }}>
             <div className="bubble">
               <img src="./icons/instagram.svg" />
             </div>
