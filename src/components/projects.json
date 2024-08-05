@@ -200,7 +200,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "Bootstrap 5", "AWS EC2", "Ubuntu", "Git", "MySQL"],
-    "video": "false",
+    "video": "./lpc/vid.mp4",
     "images": ["./lpc/1.jpg", "./lpc/2.jpg", "./lpc/3.jpg", "./lpc/4.jpg"]
   },
   {
