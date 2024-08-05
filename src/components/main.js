@@ -165,7 +165,7 @@ const Main = () => {
               </div>
               <div class="modal-body">
                 {activeProj !== 0 && datas[activeProj - 1].video != "false" ? (
-                  <video width="100%" height="720" autoplay controls>
+                  <video width="100%" height="100%" autoplay controls>
                     <source src={datas[activeProj - 1].video} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
