@@ -153,6 +153,30 @@ const Main = () => {
           </div>
         </div>
       </div>
+
+      <div className="container-fluid">
+        <div class="modal fade" id="videoBoxLabel" tabindex="2" aria-labelledby="videoBoxLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content  bgcolor-secondary" style={{ borderRadius: "20px" }}>
+              <div class="modal-header border-0">
+                <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " data-bs-dismiss="modal" aria-label="Close">
+                  <img src="./icons/close.svg" />
+                </button>
+              </div>
+              <div class="modal-body">
+                {activeProj !== 0 && datas[activeProj - 1].video != "false" ? (
+                  <video width="100%" height="720" autoplay controls>
+                    <source src={datas[activeProj - 1].video} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <h4 className="display-6 txtcolor-primary text-center py-5">Video not available at the moment.</h4>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -61,7 +61,7 @@ const Details = ({ data, setCurentProj }) => {
                 <img src={data.images[0]} className="roundedimg shadow " />
 
                 <div className=" position-absolute detailsVideo">
-                  <div class="loader2">
+                  <div class="loader2" data-bs-toggle="modal" data-bs-target="#videoBoxLabel">
                     <div class="circle"></div>
                     <div class="circle"></div>
                     <div class="circle"></div>

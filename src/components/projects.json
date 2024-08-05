@@ -28,6 +28,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "video": "false",
     "images": [
       "https://portfolio-fiverr-self.vercel.app/cal3.jpg",
       "https://portfolio-fiverr-self.vercel.app/cal4.jpg",
@@ -65,6 +66,7 @@
     ],
 
     "tech_stack": ["React", "Django", "Django DRF", "PostgreSQL"],
+    "video": "false",
     "images": ["./crtiq_4.jpeg", "./crtiq_2.jpeg", "./crtiq_3.jpeg", "./crtiq_1.jpeg"]
   },
   {
@@ -95,6 +97,7 @@
       }
     ],
     "tech_stack": ["React", "Email JS", "PHP", "MySQL"],
+    "video": "false",
     "images": ["https://portfolio-fiverr-self.vercel.app/artstore.jpg", "./artMerch/1.jpg", "./artMerch/2.jpg", "./artMerch/3.jpg"]
   },
   {
@@ -126,6 +129,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
+    "video": "false",
     "images": ["./carbontrack/1.jpeg", "./carbontrack/2.jpeg", "./carbontrack/3.jpeg", "./carbontrack/4.jpeg"]
   },
   {
@@ -196,6 +200,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "Bootstrap 5", "AWS EC2", "Ubuntu", "Git", "MySQL"],
+    "video": "false",
     "images": ["./lpc/1.jpg", "./lpc/2.jpg", "./lpc/3.jpg", "./lpc/4.jpg"]
   },
   {
@@ -234,6 +239,7 @@
       }
     ],
     "tech_stack": ["Flask", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Docker"],
+    "video": "./gbase/vid.mp4",
     "images": ["./gbase/1.jpeg", "./gbase/2.jpeg", "./gbase/3.jpeg", "./gbase/1.jpeg"]
   },
   {
@@ -272,6 +278,7 @@
       }
     ],
     "tech_stack": ["Django", "Python", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Git", "PostgreSQL ", "CI/CD"],
+    "video": "false",
     "images": ["./s3/1.jpeg", "./s3/2.jpeg", "./s3/3.jpeg", "./s3/1.jpeg"]
   },
   {
@@ -310,6 +317,7 @@
       }
     ],
     "tech_stack": ["Django", "Python", "ChartJS", "React", "AWS EC2", "AWS S3", "Nginx", "Git", "MySQL ", "Docker", "CI/CD"],
+    "video": "false",
     "images": ["./giftgen/1.jpg", "./giftgen/2.jpg", "./giftgen/3.jpg", "./giftgen/4.jpg"]
   },
   {
@@ -348,6 +356,7 @@
       }
     ],
     "tech_stack": ["Node.js", "PostgreSQL", "Razorpay", "React", "Git", "CI/CD"],
+    "video": "false",
     "images": ["./lendme/1.jpg", "./lendme/2.jpg", "./lendme/3.jpg", "./lendme/4.jpg"]
   }
 ]
