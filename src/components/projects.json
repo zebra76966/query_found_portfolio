@@ -73,35 +73,29 @@
     "desc": "Developed a small e-merch store for and idependent artist probiding him the platform to sell his print media, posters, apparels etc. App uses email js to directly send the order to the seller mail from there onward the seller can handle the user data and reuest using there CRM.",
     "small_desc": "E-merch store for and idependent artist",
     "features": [
-      { "name": "User Authentication", "detail": "Users can register and log in using their Spotify accounts. OAuth 2.0 authentication ensures secure and seamless login via Spotify." },
       {
-        "name": "User Profiles",
-        "detail": "Users have customizable profiles displaying their favorite lists, albums, recently played tracks, and added playlists. Profiles can be followed by other users, creating a network of music enthusiasts. Users can update their profile information, including name and personal details."
+        "name": "Portfolio",
+        "detail": "Artist have dynamic way to set his work with clients and personal projects"
       },
       {
-        "name": "Social Interactions",
-        "detail": "Users can comment on songs, albums, and playlists, fostering discussions and sharing opinions. Users can rate songs and artists, contributing to the community's collective preferences. A feed section shows the latest activities of followed users, such as comments, ratings, and song shares. Users can share songs with their followers, similar to Instagram's reel share option."
+        "name": "Shop",
+        "detail": "Users can purchase art merch from the website."
       },
       {
-        "name": "Integration with Spotify",
-        "detail": "Users can see their Spotify playlists and recent tracks directly on the webapp. The app utilizes Spotify API to fetch real-time data, ensuring a seamless integration of Spotify features. Song search functionality is provided, fetching results directly from the Spotify API."
+        "name": "User Authentication",
+        "detail": "Users can register on the site for buying and booking custom work from the artist."
       },
       {
-        "name": "Feed Section",
-        "detail": "A dynamic feed displays activities from followed users, including their comments, ratings, and song shares. Users can interact with the feed by liking or commenting on activities."
+        "name": "Contact using Emailjs",
+        "detail": "User can directly contact to the artist with contact form which is integrated with email js and reduce the cost of getting a commercial email for the merch store."
       },
       {
-        "name": "Song Search",
-        "detail": "Users can search for songs within the webapp. Search results are fetched directly from the Spotify API, ensuring up-to-date and accurate information. Users can search for songs, artists, and other users within the webapp."
+        "name": "Cart System",
+        "detail": "Users can easiyl add items to there cart for buying later or buying in bulk."
       }
     ],
     "tech_stack": ["React", "Email JS", "PHP", "MySQL"],
-    "images": [
-      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
-      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
-      "https://portfolio-fiverr-self.vercel.app/artstore.jpg",
-      "https://portfolio-fiverr-self.vercel.app/artstore.jpg"
-    ]
+    "images": ["https://portfolio-fiverr-self.vercel.app/artstore.jpg", "./artMerch/1.jpg", "./artMerch/2.jpg", "./artMerch/3.jpg"]
   },
   {
     "name": "CarbonTrack",
@@ -132,12 +126,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "AWS Lambda", "ChartJS"],
-    "images": [
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg",
-      "https://portfolio-fiverr-self.vercel.app/carbon.jpeg"
-    ]
+    "images": ["./carbontrack/1.jpeg", "./carbontrack/2.jpeg", "./carbontrack/3.jpeg", "./carbontrack/4.jpeg"]
   },
   {
     "name": "LPC Invest",
@@ -207,12 +196,7 @@
       }
     ],
     "tech_stack": ["HTML5", "CSS3", "Bootstrap 5", "AWS EC2", "Ubuntu", "Git", "MySQL"],
-    "images": [
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
-    ]
+    "images": ["./lpc/1.jpg", "./lpc/2.jpg", "./lpc/3.jpg", "./lpc/4.jpg"]
   },
   {
     "name": "GitHub Metrics",
@@ -250,12 +234,7 @@
       }
     ],
     "tech_stack": ["Flask", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Docker"],
-    "images": [
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
-    ]
+    "images": ["./gbase/1.jpeg", "./gbase/2.jpeg", "./gbase/3.jpeg", "./gbase/1.jpeg"]
   },
   {
     "name": "S3-Enhanced Dynamic Data Visualization",
@@ -293,12 +272,7 @@
       }
     ],
     "tech_stack": ["Django", "Python", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Git", "PostgreSQL ", "CI/CD"],
-    "images": [
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
-      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
-    ]
+    "images": ["./s3/1.jpeg", "./s3/2.jpeg", "./s3/3.jpeg", "./s3/1.jpeg"]
   },
   {
     "name": "FLIP GIFT Cadeau Generator",
