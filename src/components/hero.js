@@ -16,7 +16,7 @@ const Hero = ({ mobile }) => {
           <motion.img src="./mascot2.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2 }} />
 
           <motion.div className="position-absolute top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 1.8 }}>
-            QUERY-FOUND
+            BHARAT-WEB-DEV
           </motion.div>
 
           <motion.div className="position-absolute left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.1 }}>
