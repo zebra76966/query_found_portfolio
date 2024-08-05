@@ -213,5 +213,167 @@
       "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
       "https://portfolio-fiverr-self.vercel.app/lps.jpg"
     ]
+  },
+  {
+    "name": "GitHub Metrics",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "The GitHub Metrics Dashboard is a streamlined and efficient project management tool designed to integrate custom analytics for GitHub repositories. This dashboard provides summarized statistics widgets for issues, pull requests (PRs), and workflows, presented through interactive stats cards. The project leverages the GitHub API to fetch and visualize data, enhancing the user's ability to manage and monitor their repositories effectively. The application is deployed on AWS Elastic Beanstalk for scalability and reliability.",
+    "small_desc": "The GitHub Metrics Dashboard is a streamlined and efficient project management tool designed to integrate custom analytics for GitHub repositories.",
+    "features": [
+      {
+        "name": "Summarized Stat Widgets",
+        "detail": "Issues: Displays the number of open, closed, and in-progress issues. Includes metrics such as average resolution time, most common issue tags, and top contributors. Pull Requests (PRs): Shows the status of pull requests (open, merged, closed). Includes metrics like average time to merge, most active contributors, and PR comments count. Workflows: Provides insights into CI/CD pipelines, including the number of successful, failed, and in-progress workflows. Tracks build times and success rates."
+      },
+      {
+        "name": "Interactive Cards",
+        "detail": "Interactive and clickable stats cards that provide detailed views and insights into each metric. Visual representation through charts and graphs for better data comprehension. Filtering options to view statistics by date ranges, tags, contributors, etc."
+      },
+      {
+        "name": "Data Visualization",
+        "detail": "Utilizes the GitHub API to fetch real-time data. Data visualization using libraries like D3.js or Chart.js for dynamic and interactive charts. Displays statistics in both graphical and tabular formats for comprehensive data analysis."
+      },
+      {
+        "name": "Custom Analytics",
+        "detail": "Customizable analytics to meet specific project needs. Ability to track and visualize trends over time, such as issue resolution rates and PR merge times. Advanced analytics for identifying bottlenecks and optimizing project workflows."
+      },
+      {
+        "name": "Profile Management",
+        "detail": "Integrated JWT authentication for secure login and session management. Profile management features allowing users to update their information and settings."
+      },
+      {
+        "name": "Filters",
+        "detail": "Advanced filters to show open and closed issues within a specified date range. Allows users to drill down into specific time periods for detailed analysis."
+      },
+      {
+        "name": "Deployment",
+        "detail": "Hosted on AWS Elastic Beanstalk, ensuring high availability and scalability. Automatic scaling to handle varying loads and ensure consistent performance. Secure and reliable deployment environment."
+      }
+    ],
+    "tech_stack": ["Flask", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Docker"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
+    ]
+  },
+  {
+    "name": "S3-Enhanced Dynamic Data Visualization",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "The S3-Enhanced Dynamic Data Visualization project is designed to provide interactive data visualization with advanced sorting and searching capabilities. The project seamlessly integrates AWS S3 for dynamic file handling, optimizing data retrieval, and uses RDS with PostgreSQL for efficient data management. Users can fetch and visualize data stored in their AWS S3 buckets, enabling comprehensive data analysis. The backend is developed using the Django framework, and the frontend UI is built with React.js.",
+    "small_desc": "The S3-Enhanced Dynamic Data Visualization project is designed to provide interactive data visualization.",
+    "features": [
+      {
+        "name": "AWS S3 Integration",
+        "detail": "Fetch and integrate dynamic files from AWS S3. Users can select folders and files from their S3 buckets via the UI. Efficient data retrieval optimized for large datasets."
+      },
+      {
+        "name": "Data Visualization",
+        "detail": "Utilizes advanced data visualization techniques to analyze data fetched from S3. Supports various types of visualizations such as charts, graphs, and tables. Interactive visualization with features like sorting, searching, and filtering."
+      },
+      {
+        "name": "User Authentication",
+        "detail": "Token-based authentication for secure access. Users can log in and manage their profiles. Capability to add and manage their S3 account details."
+      },
+      {
+        "name": "Dynamic Data Handling",
+        "detail": "Real-time data processing and visualization. Advanced sorting and searching functionalities for data analysis. Ability to handle and visualize large datasets dynamically. Advanced analytics for identifying bottlenecks and optimizing project workflows."
+      },
+      {
+        "name": "Backend",
+        "detail": "Backend built using Django framework in Python for robustness and scalability. RDS with PostgreSQL for reliable and efficient data storage. Integration with AWS services for seamless data flow."
+      },
+      {
+        "name": "Frontend",
+        "detail": "Responsive and interactive UI built with React.js. Intuitive design to allow easy navigation and data interaction. Dynamic data selection and visualization options."
+      },
+      {
+        "name": "Deployment",
+        "detail": "Hosted on AWS Elastic Beanstalk, ensuring high availability and scalability. Automatic scaling to handle varying loads and ensure consistent performance. Secure and reliable deployment environment."
+      }
+    ],
+    "tech_stack": ["Django", "Python", "ChartJS", "React", "AWS EB", "AWS RDS", "Nginx", "Git", "PostgreSQL ", "CI/CD"],
+    "images": [
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps2.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps3.jpg",
+      "https://portfolio-fiverr-self.vercel.app/lps.jpg"
+    ]
+  },
+  {
+    "name": "FLIP GIFT Cadeau Generator",
+    "url": "https://www.generator.flippcadeau.nl/",
+    "desc": "FLIP GIFT Cadeau Generator is a dynamic gift recommendation engine designed to provide personalized gift suggestions for various occasions. Users can select different categories and preferences such as gender, occasion, interests and age to receive tailored gift recommendations. The application leverages Django for backend development, React for the frontend, and AWS services for efficient and scalable deployment.",
+    "small_desc": "FLIP GIFT Cadeau Generator is a dynamic gift recommendation engine designed to provide personalized gift suggestions for various occasions.",
+    "features": [
+      {
+        "name": "Personalized Gift Recommendations",
+        "detail": "Users can input preferences like gender, occasion, and age. The engine generates personalized gift suggestions based on the selected criteria."
+      },
+      {
+        "name": "Category and Preferences",
+        "detail": "Multiple categories and choices are available for users to filter their preferences. Options include various occasions (birthdays, anniversaries, holidays, etc.), gender (male, female, unisex), and age groups."
+      },
+      {
+        "name": "Efficient Data Retrieval",
+        "detail": "Utilized Django's pagination to handle large datasets and improve load times. Implemented caching mechanisms to enhance retrieval speed and reduce server load."
+      },
+      {
+        "name": "User Experience",
+        "detail": "Interactive and user-friendly interface built with React. Smooth navigation and quick response times to ensure a seamless user experience."
+      },
+      {
+        "name": "Backend",
+        "detail": "Backend developed using Django framework in Python. Data stored in MySQL database hosted on AWS RDS for reliability and scalability."
+      },
+      {
+        "name": "Deployment and Storage",
+        "detail": "Responsive and interactive UI built with React.js. Intuitive design to allow easy navigation and data interaction. Dynamic data selection and visualization options."
+      },
+      {
+        "name": "Deployment",
+        "detail": "Application hosted on AWS EC2 with Ubuntu for a stable and scalable environment. Media files and static assets stored on AWS S3 for efficient and secure access."
+      }
+    ],
+    "tech_stack": ["Django", "Python", "ChartJS", "React", "AWS EC2", "AWS S3", "Nginx", "Git", "MySQL ", "Docker", "CI/CD"],
+    "images": ["./giftgen/1.jpg", "./giftgen/2.jpg", "./giftgen/3.jpg", "./giftgen/4.jpg"]
+  },
+  {
+    "name": "LendMe",
+    "url": "https://lend-me-p2p.netlify.app/",
+    "desc": "Welcome to LendMe, your trusted platform for peer-to-peer (P2P) lending and borrowing. Our application offers registered users a variety of P2P loan options tailored to their financial needs, whether they are looking to borrow or invest. Users can browse through a range of loan requests, filter by interest rates, and choose the best fit for their financial goals. Additionally, LendMe provides a seamless money transfer service through an in-app wallet, allowing users to receive and manage funds electronically.",
+    "small_desc": "P2P Lending & Borrowing Fintech Solution.",
+    "features": [
+      {
+        "name": "Personalized Loan",
+        "detail": "Browse and filter loan requests by interest rates and terms."
+      },
+      {
+        "name": "Dynamic Agreement",
+        "detail": "Automated creation of loan agreements between borrowers and lenders, generated as PDFs."
+      },
+      {
+        "name": "Payment Gateway",
+        "detail": "Supports multiple payment methods for seamless transactions with Razorpay."
+      },
+      {
+        "name": "In-App Wallet",
+        "detail": "Securely manage your funds within the app with easy deposits, withdrawals, and transfers."
+      },
+      {
+        "name": "User Authentication",
+        "detail": "Secure login with JWT tokens and comprehensive profile management."
+      },
+      {
+        "name": "Real-Time Data Monitoring",
+        "detail": "Track the status of loans and investments with advanced analytics."
+      },
+      {
+        "name": "Secure Data Encryption",
+        "detail": "Protects sensitive information with robust encryption."
+      }
+    ],
+    "tech_stack": ["Node.js", "PostgreSQL", "Razorpay", "React", "Git", "CI/CD"],
+    "images": ["./lendme/1.jpg", "./lendme/2.jpg", "./lendme/3.jpg", "./lendme/4.jpg"]
   }
 ]
