@@ -15,7 +15,7 @@ const Hero = ({ mobile }) => {
         <div className="hero-box d-flex align-items-center justify-content-center">
           <motion.img src="./mascot2.png" className="hero-img" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2 }} />
 
-          <motion.div className="position-absolute top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 1.8 }}>
+          <motion.div className="position-absolute top-right-text d-none" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 1.8 }}>
             BHARAT-WEB-DEV
           </motion.div>
 
@@ -63,7 +63,14 @@ const Hero = ({ mobile }) => {
             />
           </div>
 
-          <motion.div className="position-absolute mobile top-right-text" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 0.8 }}>
+          <motion.div
+            className="position-absolute mobile top-right-text d-none"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={fadeUpVariants}
+            transition={{ duration: 0.5, delay: 1 + 0.8 }}
+          >
             QUERY<span className="d-block">FOUND</span>
           </motion.div>
           <motion.div className="position-absolute mobile left-text txtcolor-secondary " variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 2.1 }}>
