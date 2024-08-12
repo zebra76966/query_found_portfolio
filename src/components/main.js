@@ -18,6 +18,64 @@ const Main = () => {
   const [portfolio, setFolio] = useState(false);
   const [activeProj, setCurentProj] = useState(0);
 
+  const portfolioRef = useRef(null);
+  useEffect(() => {
+    if (!mobile) {
+      const handleWheel = (event) => {
+        if (event.deltaY > 0) {
+          // User scrolls down
+          setFolio(true);
+        }
+      };
+
+      const handleTouchStart = (event) => {
+        window.initialTouchY = event.touches[0].clientY;
+      };
+
+      const handleTouchMove = (event) => {
+        const currentTouchY = event.touches[0].clientY;
+        if (window.initialTouchY > currentTouchY) {
+          // User scrolls down
+          setFolio(true);
+        }
+      };
+
+      const handlePortfolioScroll = () => {
+        if (portfolioRef.current) {
+          const { scrollTop } = portfolioRef.current;
+
+          // If the user has scrolled back to the top, set portfolio to false
+          if (scrollTop === 0) {
+            setFolio(false);
+          }
+        }
+      };
+
+      if (!portfolio) {
+        window.addEventListener("wheel", handleWheel);
+        window.addEventListener("touchstart", handleTouchStart);
+        window.addEventListener("touchmove", handleTouchMove);
+      } else {
+        const currentPortfolioRef = portfolioRef.current;
+
+        if (currentPortfolioRef) {
+          const scrollTop = currentPortfolioRef.scrollTop;
+          currentPortfolioRef.scrollTop = scrollTop + 20;
+          currentPortfolioRef.addEventListener("scroll", handlePortfolioScroll);
+        }
+      }
+
+      return () => {
+        window.removeEventListener("wheel", handleWheel);
+        window.removeEventListener("touchstart", handleTouchStart);
+        window.removeEventListener("touchmove", handleTouchMove);
+        if (portfolioRef.current) {
+          portfolioRef.current.removeEventListener("scroll", handlePortfolioScroll);
+        }
+      };
+    }
+  }, [portfolio, mobile]);
+
   useEffect(() => {
     if (window.location.pathname.includes("/projects")) {
       setFolio(true);
@@ -79,7 +137,7 @@ const Main = () => {
             variants={fadeUpVariants}
             transition={{ duration: 0.5, delay: 3 }}
           >
-            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} />
+            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} folio={portfolio} />
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
@@ -120,8 +178,8 @@ const Main = () => {
         </div>
       </div>
 
-      <div className={`container-fluid portfolio ${portfolio ? "in" : "out"} thinScroll`}>
-        <Portfolio setCurentProj={(e) => setCurentProj(e)} />
+      <div className={`container-fluid portfolio ${portfolio ? "in" : "out"} thinScroll`} ref={portfolioRef}>
+        <Portfolio setCurentProj={(e) => setCurentProj(e)} folio={portfolio} />
       </div>
 
       <div ref={containerRef} className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>

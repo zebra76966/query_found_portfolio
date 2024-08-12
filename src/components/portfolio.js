@@ -1,5 +1,5 @@
 import "./portfolio.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./cards";
 import { motion } from "framer-motion";
 import datas from "./projects.json";

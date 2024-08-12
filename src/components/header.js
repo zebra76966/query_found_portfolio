@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Header = ({ mobile, setFolio, setCurentProj }) => {
+const Header = ({ mobile, setFolio, setCurentProj, folio }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
 
@@ -14,6 +14,13 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (folio) {
+      setActive("assets");
+    } else {
+      setActive("home");
+    }
+  }, [folio]);
   return (
     <>
       {!mobile && (
@@ -44,7 +51,9 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
             </a>
             <a
               href="#"
-              className={`mx-auto mt-4 mb-4 rounded-circle ${active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
+              className={`mx-auto position-relative mt-4 mb-4 rounded-circle ${
+                active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"
+              } d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("assets");
@@ -53,18 +62,38 @@ const Header = ({ mobile, setFolio, setCurentProj }) => {
                 setCurentProj(0);
               }}
             >
-              {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}
+              {active == "assets" || active == "about" ? (
+                <img src="./icons/puzzle_a.svg" className="ms-1" />
+              ) : (
+                <>
+                  <img src="./icons/puzzle_b.svg" className="ms-1" />
+                  <p className="bgcolor-secondary txtcolor-primary rounded-pill text-center py-2 px-3" style={{ position: "absolute", top: "50%", right: "-100px", transform: "translateY(-50%)" }}>
+                    {" "}
+                    Projects{" "}
+                  </p>
+                </>
+              )}
             </a>
             <a
               href="#"
-              className={`mx-auto mt-4 mb-4 rounded-circle ${active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
+              className={`mx-auto position-relative mt-4 mb-4 rounded-circle ${active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("about");
                 setFolio(false);
               }}
             >
-              {active == "about" ? <img src="./icons/doc_a.svg" className="ms-1" /> : <img src="./icons/doc_b.svg" className="ms-1" />}
+              {active == "about" ? (
+                <img src="./icons/doc_a.svg" className="ms-1" />
+              ) : (
+                <>
+                  <img src="./icons/doc_b.svg" className="ms-1" />
+                  <p className="bgcolor-secondary txtcolor-primary py-2 px-3 rounded-pill text-center " style={{ position: "absolute", top: "50%", right: "-100px", transform: "translateY(-50%)" }}>
+                    {" "}
+                    Services{" "}
+                  </p>{" "}
+                </>
+              )}
             </a>
           </div>
 
