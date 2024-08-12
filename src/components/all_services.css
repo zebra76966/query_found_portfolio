@@ -1,0 +1,204 @@
+.allServices.in {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 99;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadeup 0.8s ease-in-out forwards;
+}
+
+@keyframes slidefadeup {
+  0% {
+    top: 60%;
+    transform: translate(-50%, 60%);
+    border-radius: 50px;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+}
+
+.allServices.out {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 99;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadedown 0.8s ease-in-out forwards;
+}
+
+@keyframes slidefadedown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+  100% {
+    top: 60%;
+    transform: translate(-50%, 60%);
+    border-radius: 50px;
+  }
+}
+
+.allServices .tags,
+.allServicedets .tags {
+  position: sticky;
+  top: -1%;
+  background: #e1d8d2;
+  left: 0;
+  z-index: 100;
+}
+
+.custom-card {
+  border-radius: 2.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 670px;
+  background-size: 160%;
+  outline: 5px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-card:hover {
+  background-size: 180%;
+  outline: 5px dashed #351518;
+}
+
+.custom-card .card-text {
+  padding: 10px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 0px -150px 60px 5px #2020205e;
+}
+
+/* Details */
+.allServicedets.in {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 109;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadeup2 0.8s ease-in-out forwards;
+}
+
+@keyframes slidefadeup2 {
+  0% {
+    left: 60%;
+    transform: translate(60%, -50%);
+    border-radius: 50px;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+}
+
+.allServicedets.out {
+  position: fixed;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-color: #e1d8d2;
+  z-index: 99;
+  height: 100dvh;
+  width: 100dvw;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  animation: slidefadedown 0.8s ease-in-out forwards;
+}
+.portDiv {
+  width: 90%;
+}
+
+@keyframes slidefadedown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+  100% {
+    top: 60%;
+    transform: translate(-50%, 60%);
+    border-radius: 50px;
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .custom-card {
+    height: 500px;
+    background-size: 140%;
+  }
+  .custom-card:hover {
+    background-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .custom-card {
+    height: 400px;
+    background-size: 120%;
+  }
+  .custom-card:hover {
+    background-size: 130%;
+  }
+  .portDiv {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .custom-card {
+    height: 300px;
+    background-size: 180%;
+  }
+  .custom-card:hover {
+    background-size: 190%;
+  }
+  .custom-card h3 {
+    font-size: 1.5rem !important;
+  }
+  .custom-card button:not(:nth-child(1)) {
+    font-size: 0.8rem !important;
+    margin-bottom: 3px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container-fluid.allServices {
+    padding: 0;
+  }
+  .allServices .tags {
+    background: #e1d8d2;
+    /* padding-left: 93px !important; */
+    white-space: nowrap;
+    overflow: auto;
+  }
+}

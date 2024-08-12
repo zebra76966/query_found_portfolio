@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import Portfolio from "./portfolio";
 import Details from "./details";
 import datas from "./projects.json";
+import datas2 from "./services.json";
+import AllServices from "./all_services";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -18,7 +20,11 @@ const Main = () => {
   const [portfolio, setFolio] = useState(false);
   const [activeProj, setCurentProj] = useState(0);
 
+  const [activeProj2, setCurentProj2] = useState(0);
+  const [allServices, setAllServices] = useState(false);
+
   const portfolioRef = useRef(null);
+  const servicesRef = useRef(null);
   useEffect(() => {
     if (!mobile) {
       const handleWheel = (event) => {
@@ -42,11 +48,28 @@ const Main = () => {
 
       const handlePortfolioScroll = () => {
         if (portfolioRef.current) {
-          const { scrollTop } = portfolioRef.current;
+          const { scrollTop, scrollHeight, clientHeight } = portfolioRef.current;
 
           // If the user has scrolled back to the top, set portfolio to false
           if (scrollTop === 0) {
             setFolio(false);
+          }
+
+          // If the user has scrolled to the very bottom, set allServices to true
+          if (scrollTop + clientHeight >= scrollHeight) {
+            setAllServices(true);
+          }
+        }
+      };
+
+      const handleServicesScroll = () => {
+        if (servicesRef.current) {
+          const { scrollTop } = servicesRef.current;
+
+          // If the user has scrolled back to the top, set portfolio to true
+          if (scrollTop === 0) {
+            setFolio(true);
+            setAllServices(false);
           }
         }
       };
@@ -57,11 +80,18 @@ const Main = () => {
         window.addEventListener("touchmove", handleTouchMove);
       } else {
         const currentPortfolioRef = portfolioRef.current;
+        const currentServicesRef = servicesRef.current;
 
         if (currentPortfolioRef) {
           const scrollTop = currentPortfolioRef.scrollTop;
           currentPortfolioRef.scrollTop = scrollTop + 20;
           currentPortfolioRef.addEventListener("scroll", handlePortfolioScroll);
+        }
+
+        if (currentServicesRef) {
+          const scrollTop = currentServicesRef.scrollTop;
+          currentServicesRef.scrollTop = scrollTop + 20;
+          currentServicesRef.addEventListener("scroll", handleServicesScroll);
         }
       }
 
@@ -72,9 +102,12 @@ const Main = () => {
         if (portfolioRef.current) {
           portfolioRef.current.removeEventListener("scroll", handlePortfolioScroll);
         }
+        if (servicesRef.current) {
+          servicesRef.current.removeEventListener("scroll", handleServicesScroll);
+        }
       };
     }
-  }, [portfolio, mobile]);
+  }, [portfolio, mobile, allServices]);
 
   useEffect(() => {
     if (window.location.pathname.includes("/projects")) {
@@ -97,10 +130,10 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
-    if (!portfolio) {
+    if (!portfolio || !allServices) {
       setCurentProj(0);
     }
-  }, [portfolio]);
+  }, [portfolio, allServices]);
 
   const containerRef = useRef(null);
 
@@ -111,7 +144,7 @@ const Main = () => {
       }, 500);
       // Scrolls the element to the top
     }
-  }, [activeProj]);
+  }, [activeProj, activeProj2]);
 
   return (
     <>
@@ -123,7 +156,7 @@ const Main = () => {
       </div>
       {mobile && (
         <div className="logo-box">
-          <img src="./logo2.gif" />
+          <img src="./logo.png" />
         </div>
       )}
 
@@ -137,7 +170,7 @@ const Main = () => {
             variants={fadeUpVariants}
             transition={{ duration: 0.5, delay: 3 }}
           >
-            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} folio={portfolio} />
+            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} folio={portfolio} setAllServices={(e) => setAllServices(e)} allServices={allServices} />
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
@@ -177,14 +210,25 @@ const Main = () => {
           </div>
         </div>
       </div>
-
+      {/* Portfolio Start==================> */}
       <div className={`container-fluid portfolio ${portfolio ? "in" : "out"} thinScroll`} ref={portfolioRef}>
-        <Portfolio setCurentProj={(e) => setCurentProj(e)} folio={portfolio} />
+        <Portfolio setCurentProj={(e) => setCurentProj(e)} />
       </div>
 
       <div ref={containerRef} className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
         <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} setCurentProj={(e) => setCurentProj(e)} />
       </div>
+      {/* Portfolio End====================> */}
+
+      {/* Services Start===================> */}
+      <div className={`container-fluid allServices ${allServices ? "in" : "out"} thinScroll`} ref={servicesRef}>
+        <AllServices setCurentProj={(e) => setCurentProj2(e)} />
+      </div>
+
+      <div ref={containerRef} className={`container-fluid allServicedets ${activeProj2 !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
+        <Details data={datas2[activeProj2 !== 0 ? activeProj2 - 1 : activeProj2]} setCurentProj={(e) => setCurentProj2(e)} />
+      </div>
+      {/* Services End===================> */}
 
       <div className="container-fluid">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

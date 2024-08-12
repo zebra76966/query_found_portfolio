@@ -1,0 +1,325 @@
+[
+  {
+    "name": "Full-Stack Development",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Our Full-Stack Development services offer comprehensive solutions for building dynamic, high-performing web applications. We specialize in both front-end and back-end technologies, ensuring seamless integration of all components to deliver robust, scalable, and efficient applications. From server-side logic to client-side interfaces, we provide end-to-end development tailored to your business needs.",
+    "small_desc": "Our Full-Stack Development services offer comprehensive solutions for building dynamic, high-performing web applications.",
+    "features": [
+      {
+        "name": "Responsive Design",
+        "detail": "Ensures that the website or application functions well and looks great on any device, whether it’s a desktop, tablet, or smartphone. We prioritize optimizing layouts and features to adapt seamlessly to different screen sizes and resolutions."
+      },
+      {
+        "name": "Custom UI Design",
+        "detail": "We craft unique and engaging user interfaces tailored to your brand and user experience goals. This includes designing the visual elements and interactions that define how users engage with the application."
+      },
+      {
+        "name": "Integration with Backend APIs",
+        "detail": "We provide seamless integration with backend services and APIs, enabling your application to communicate effectively with external data sources, services, or platforms to enhance functionality and provide richer user experiences."
+      },
+      {
+        "name": "Custom Website Design",
+        "detail": "We offer bespoke website design services, creating custom layouts, themes, and styles to ensure your website stands out and aligns with your brand’s identity and objectives."
+      },
+      {
+        "name": "Dynamic Website Integration",
+        "detail": "Our services include integrating dynamic elements into your website, such as interactive forms, real-time updates, and personalized content, to enhance user engagement and interaction."
+      },
+      {
+        "name": "Business Management Websites",
+        "detail": "We specialize in developing websites tailored to the needs of businesses, incorporating features such as user management, product listings, order processing, and administrative tools to streamline operations and enhance online presence."
+      }
+    ],
+    "tech_stack": ["React.js", "Vue.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind", "Django", "Flask", "FastAPI", "Node.js"],
+    "video": "false",
+    "images": ["./services/fullstack.jpg", "./services/fullstack.jpg", "./services/fullstack.jpg", "./services/fullstack.jpg"]
+  },
+  {
+    "name": "Frontend Development",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "We create visually appealing and user-friendly interfaces that provide an excellent user experience. Our frontend development services focus on responsive design, performance optimization, and accessibility. We also specialize in creating custom UI designs and integrating them with backend APIs to ensure a seamless user experience.",
+    "small_desc": "We create visually appealing and user-friendly interfaces that provide an excellent user experience.",
+    "features": [
+      {
+        "name": "Responsive Design",
+        "detail": "We ensure that the website's layout and functionality adjust smoothly across various devices and screen sizes, providing an optimal user experience on desktops, tablets, and mobile phones."
+      },
+      {
+        "name": "Custom UI Design",
+        "detail": "Our team crafts unique and interactive user interfaces that are tailored to your brand and user needs, emphasizing ease of use and visual appeal to enhance user engagement."
+      },
+      {
+        "name": "Integration with Backend APIs",
+        "detail": "We integrate frontend interfaces with backend services, allowing for efficient communication between the user interface and server-side functionalities, ensuring that data is accurately fetched and displayed."
+      },
+      {
+        "name": "Responsive Design",
+        "detail": "We ensure that the website's layout and functionality adjust smoothly across various devices and screen sizes, providing an optimal user experience on desktops, tablets, and mobile phones."
+      },
+      {
+        "name": "Custom UI Design",
+        "detail": "Our team crafts unique and interactive user interfaces that are tailored to your brand and user needs, emphasizing ease of use and visual appeal to enhance user engagement."
+      },
+      {
+        "name": "Integration with Backend APIs",
+        "detail": "We integrate frontend interfaces with backend services, allowing for efficient communication between the user interface and server-side functionalities, ensuring that data is accurately fetched and displayed."
+      }
+    ],
+    "tech_stack": ["React.js", "Vue.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind"],
+    "video": "false",
+    "images": ["./services/frontend.jpg", "./services/frontend.jpg", "./services/frontend.jpg", "./services/frontend.jpg"]
+  },
+  {
+    "name": "UI/UX Development",
+    "url": "https://critiq.se/",
+    "desc": "Our UI/UX development services enhance user satisfaction by improving the usability, accessibility, and overall experience of your digital products. We design intuitive interfaces that engage and retain users.",
+    "small_desc": "Enhancing user satisfaction by improving the usability, accessibility, and overall experience of your digital products",
+    "features": [
+      {
+        "name": "User Research and Analysis",
+        "detail": "We conduct thorough user research and analysis to understand the target audience's needs, behaviors, and pain points. This insight drives the design process and ensures that the end product aligns with user expectations and requirements."
+      },
+      {
+        "name": "Wireframing and Prototyping",
+        "detail": "Our team creates detailed wireframes and interactive prototypes that serve as blueprints for the final design. This step helps in visualizing the user journey and identifying potential issues early in the design process."
+      },
+      {
+        "name": "Visual Design",
+        "detail": "We craft visually appealing and consistent design elements that enhance the user interface. Our visual design services ensure that every component of your digital product is aesthetically pleasing and aligns with your brand identity."
+      },
+      {
+        "name": "Usability Testing",
+        "detail": "We perform comprehensive usability testing to gather feedback on the design’s functionality and user experience. This iterative process helps in refining the design to ensure it meets user needs effectively and efficiently."
+      },
+      {
+        "name": "Accessibility and Compliance",
+        "detail": "Our UI/UX designs adhere to the latest accessibility standards and guidelines, ensuring that your digital product is inclusive and usable by people with various disabilities. We focus on creating accessible designs that comply with WCAG and other relevant standards."
+      }
+    ],
+
+    "tech_stack": ["Figma", "Sketch", "Adobe XD", "PostgreSQL"],
+    "video": "false",
+    "images": ["./services/ui.jpg", "./services/ui.jpg", "./services/ui.jpg", "./services/ui.jpg"]
+  },
+  {
+    "name": "Website Redesign and Rebuilding",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Give your website a fresh, modern look with our redesign and rebuilding services. We transform outdated websites into dynamic, responsive, and user-friendly platforms that drive results.",
+    "small_desc": "Give your website a fresh, modern look with our redesign and rebuilding services.",
+    "features": [
+      {
+        "name": "Modern and Responsive Design",
+        "detail": "We redesign your website with a focus on modern aesthetics and responsiveness, ensuring it looks great and functions seamlessly on all devices, from desktops to smartphones."
+      },
+      {
+        "name": "Enhanced User Experience",
+        "detail": "Our redesign process prioritizes improving the user journey and experience. We streamline navigation, optimize load times, and ensure your content is accessible and engaging."
+      },
+      {
+        "name": "SEO Optimization",
+        "detail": "We incorporate SEO best practices into the redesign process, improving your website's visibility on search engines and increasing organic traffic to your site."
+      },
+      {
+        "name": "Content Management System (CMS) Integration",
+        "detail": "We integrate or upgrade your existing CMS to make content management easy and efficient. Whether you use WordPress, Joomla, or another CMS, we ensure it’s tailored to your needs."
+      },
+      {
+        "name": "Security and Performance Enhancements",
+        "detail": "We implement the latest security measures and performance optimizations to ensure your website is fast, secure, and reliable, providing a safe browsing experience for your users."
+      }
+    ],
+    "tech_stack": ["PHP", "Java", ".NET", "MySQL", "WordPress", "Webflow", "Joomla"],
+    "video": "false",
+    "images": ["./services/rebuild.jpg", "./services/rebuild.jpg", "./services/rebuild.jpg", "./services/rebuild.jpg"]
+  },
+  {
+    "name": "Deployment Services",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Our deployment services ensure that your applications are smoothly transitioned from development to production. We handle the entire deployment process, ensuring minimal downtime and optimal performance.",
+    "small_desc": "Our deployment services ensure that your applications are smoothly transitioned from development to production.",
+    "features": [
+      {
+        "name": "Continuous Integration and Continuous Deployment (CI/CD)",
+        "detail": "Implement automated CI/CD pipelines to streamline the deployment process, reduce errors, and ensure rapid delivery of updates and features. Our services integrate with popular tools like Jenkins, GitHub Actions, and GitLab CI/CD."
+      },
+      {
+        "name": "Cloud Deployment",
+        "detail": "Leverage the power of cloud platforms such as AWS, Azure, and Google Cloud for scalable, flexible, and secure application deployments. We manage cloud resources efficiently to optimize performance and cost."
+      },
+      {
+        "name": "Containerization and Orchestration",
+        "detail": "Utilize containerization technologies like Docker and orchestration tools such as Kubernetes to ensure your applications are easily deployable, scalable, and maintainable across different environments."
+      },
+      {
+        "name": "Load Balancing and Auto Scaling",
+        "detail": "Implement load balancing and auto-scaling solutions to ensure your application can handle varying levels of traffic and demand while maintaining high availability and performance."
+      },
+      {
+        "name": "Monitoring and Alerting",
+        "detail": "Set up comprehensive monitoring and alerting systems using tools like Prometheus, Grafana, and Datadog to proactively detect and resolve issues, ensuring the stability and reliability of your deployed applications."
+      }
+    ],
+    "tech_stack": ["AWS Lambda", "Azure", "Nginx", "Apache"],
+    "video": "false",
+    "images": ["./services/deploy.jpg", "./services/deploy.jpg", "./services/deploy.jpg", "./services/deploy.jpg"]
+  },
+  {
+    "name": "AI-Driven Solutions",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Harness the power of artificial intelligence with our AI-driven solutions. From chatbots to predictive analytics, we integrate AI technologies to enhance your business operations and decision-making processes.",
+    "small_desc": "Real-estate Brokerage Company based in Manchester, UK ",
+    "features": [
+      {
+        "name": "Chatbots and Virtual Assistants",
+        "detail": "Deploy AI-powered chatbots and virtual assistants to provide 24/7 customer support, automate responses to common inquiries, and enhance user engagement with personalized interactions."
+      },
+      {
+        "name": "Predictive Analytics",
+        "detail": "Utilize AI algorithms to analyze historical data and predict future trends and patterns. Our predictive analytics solutions help businesses make informed decisions and optimize their strategies."
+      },
+      {
+        "name": "Natural Language Processing (NLP)",
+        "detail": "Implement NLP techniques to extract insights from unstructured text data, automate sentiment analysis, and improve the accuracy of customer feedback interpretation."
+      },
+      {
+        "name": "Image and Video Recognition",
+        "detail": "Leverage deep learning models for image and video recognition tasks such as object detection, face recognition, and image classification, enhancing the capabilities of your visual data processing."
+      },
+      {
+        "name": "Recommendation Systems",
+        "detail": "Develop AI-driven recommendation systems to provide personalized product or content recommendations based on user behavior and preferences, increasing user satisfaction and engagement."
+      }
+    ],
+    "tech_stack": ["TensorFlow", "PyTorch", "Scikit-Learn", "Natural Language Processing (NLP)"],
+    "video": "./lpc/vid.mp4",
+    "images": ["./services/ai.jpg", "./services/ai.jpg", "./services/ai.jpg", "./services/ai.jpg"]
+  },
+  {
+    "name": "Data Science / Machine Learning",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Leverage our expertise in data science and machine learning to uncover insights and drive intelligent decision-making. We develop and implement advanced machine learning algorithms tailored to your specific needs, conduct comprehensive data science work, and implement AI algorithms to enhance your business processes.",
+    "small_desc": "Leverage our expertise in data science and machine learning to uncover insights and drive intelligent decision-making.",
+    "features": [
+      {
+        "name": "Advanced Machine Learning Algorithms",
+        "detail": "Design and implement complex machine learning models to solve unique business challenges. We use state-of-the-art algorithms to create predictive models that help automate processes, improve customer experiences, and forecast business outcomes."
+      },
+      {
+        "name": "Data Science Work",
+        "detail": "Conduct thorough data analysis and exploratory data analysis (EDA) to derive actionable insights. Our data scientists work with diverse data sets to uncover patterns, trends, and correlations that inform strategic decisions and business growth."
+      },
+      {
+        "name": "AI Algorithms Implementation",
+        "detail": "Integrate AI algorithms into existing systems to enhance functionality and efficiency. Our AI solutions include natural language processing, computer vision, and recommendation systems, tailored to meet specific business objectives."
+      },
+      {
+        "name": "Predictive Analytics",
+        "detail": "Leverage historical and real-time data to predict future trends and behaviors. Our predictive analytics solutions help businesses anticipate market changes, optimize operations, and identify new opportunities for growth."
+      },
+      {
+        "name": "Data Visualization",
+        "detail": "Transform complex data sets into visually compelling and easy-to-understand dashboards and reports. Our data visualization techniques enable stakeholders to make informed decisions based on clear and concise visual data representation."
+      },
+      {
+        "name": "Model Deployment and Monitoring",
+        "detail": "Deploy machine learning models into production environments and monitor their performance in real-time. Our solutions ensure that models remain accurate, reliable, and scalable, adapting to changing business needs and data landscapes."
+      }
+    ],
+    "tech_stack": ["Python", "R", "Jupyter Notebooks", "Pandas", "NumPy", "Nginx", "Docker"],
+    "video": "./gbase/vid.mp4",
+    "images": ["./services/backend.jpg", "./services/backend.jpg", "./services/backend.jpg", "./services/backend.jpg"]
+  },
+  {
+    "name": "Graphics Design",
+    "url": "https://calorie-tracker-xi.vercel.app/",
+    "desc": "Our graphics design services cover everything from logos to marketing materials. We create visually stunning graphics that align with your brand identity and captivate your audience.",
+    "small_desc": "Our graphics design services cover everything from logos to marketing materials.",
+    "features": [
+      {
+        "name": "Logo Design",
+        "detail": "Craft unique and memorable logos that represent your brand's identity and values. Our design process involves research, brainstorming, and multiple revisions to ensure the perfect logo."
+      },
+      {
+        "name": "Brand Identity Development",
+        "detail": "Develop a cohesive brand identity that includes color schemes, typography, and imagery. We create style guides that maintain consistency across all your marketing materials."
+      },
+      {
+        "name": "Marketing Materials",
+        "detail": "Design a range of marketing materials, including brochures, flyers, and banners, that effectively communicate your message and engage your target audience."
+      },
+      {
+        "name": "Infographic Design",
+        "detail": "Transform complex data and information into visually appealing infographics. We create designs that simplify information and make it easy for your audience to understand."
+      },
+      {
+        "name": "Social Media Graphics",
+        "detail": "Create engaging and shareable social media graphics that increase brand visibility and interaction. We design templates that you can easily customize for different platforms."
+      }
+    ],
+    "tech_stack": ["Adobe Photoshop", "Adobe Illustrator", "Adobe Animate", "Adobe Lightroom"],
+    "video": "false",
+    "images": ["./services/graphic.jpg", "./services/graphic.jpg", "./services/graphic.jpg", "./services/graphic.jpg"]
+  },
+  {
+    "name": "Video Editing",
+    "url": "https://www.generator.flippcadeau.nl/",
+    "desc": "We offer professional video editing services to help you create compelling and engaging video content. Whether it's for marketing, training, or social media, we've got you covered.",
+    "small_desc": "We offer professional video editing services to help you create compelling and engaging video content.",
+    "features": [
+      {
+        "name": "Cinematic Editing",
+        "detail": "Transform raw footage into a polished, cinematic video that tells a compelling story. Our team focuses on creating a visually appealing and emotionally engaging narrative."
+      },
+      {
+        "name": "Color Grading and Correction",
+        "detail": "Enhance the visual appeal of your videos through expert color grading and correction. We adjust the color and tone to achieve the desired mood and aesthetic."
+      },
+      {
+        "name": "Motion Graphics and Visual Effects",
+        "detail": "Add dynamic motion graphics and visual effects to your videos to captivate your audience. From animated text to special effects, we enhance the visual impact of your content."
+      },
+      {
+        "name": "Audio Mixing and Enhancement",
+        "detail": "Improve the audio quality of your videos with professional mixing and enhancement. We ensure that dialogue, music, and sound effects are perfectly balanced and clear."
+      },
+      {
+        "name": "Video Formatting and Optimization",
+        "detail": "Optimize your videos for various platforms and devices. We format your videos to ensure they look great on social media, websites, and mobile devices."
+      }
+    ],
+    "tech_stack": ["Adobe Premiere", "Final Cut", "Adobe After Effects"],
+    "video": "false",
+    "images": ["./services/edit.jpg", "./services/edit.jpg", "./services/edit.jpg", "./services/edit.jpg"]
+  },
+  {
+    "name": "Custom CRM Automation",
+    "url": "https://lend-me-p2p.netlify.app/",
+    "desc": "Optimize your customer relationship management with our custom CRM automation services. We design and implement automated workflows that streamline your processes and improve customer engagement. Our solutions are tailored to your specific needs, ensuring efficient management of customer interactions and data.",
+    "small_desc": "Optimize your customer relationship management with our custom CRM automation services.",
+    "features": [
+      {
+        "name": "Automated Lead Management",
+        "detail": "Streamline your lead management process with automated lead capturing, scoring, and nurturing workflows. Enhance your team's efficiency by automating repetitive tasks and focusing on high-priority leads."
+      },
+      {
+        "name": "Sales Pipeline Automation",
+        "detail": "Visualize and automate your sales pipeline to ensure smooth transitions between stages. Track the progress of deals, set reminders for follow-ups, and automate notifications for key milestones in the sales process."
+      },
+      {
+        "name": "Customer Segmentation and Targeting",
+        "detail": "Automatically segment your customers based on their behavior, preferences, and interactions. Use these segments to send targeted communications, offers, and updates that resonate with each group."
+      },
+      {
+        "name": "Task and Workflow Automation",
+        "detail": "Automate routine tasks and workflows to enhance productivity. Assign tasks to team members based on predefined rules and ensure timely completion with automated reminders and notifications."
+      },
+      {
+        "name": "Reporting and Analytics",
+        "detail": "Generate detailed reports and analytics on customer interactions, sales performance, and campaign effectiveness. Use these insights to make data-driven decisions and optimize your CRM strategies."
+      }
+    ],
+    "tech_stack": ["Salesforce", "HubSpot", "Zoho CRM", "Pipedrive"],
+    "video": "false",
+    "images": ["./services/crm.jpg", "./services/crm.jpg", "./services/crm.jpg", "./services/crm.jpg"]
+  }
+]
