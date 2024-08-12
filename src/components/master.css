@@ -1349,6 +1349,9 @@ hr {
   .top-right-text {
     font-size: 115px;
   }
+  .left-text {
+    font-size: 50px;
+  }
   .bottom-text {
     font-size: 140px;
   }
