@@ -30,7 +30,7 @@
         "detail": "We specialize in developing websites tailored to the needs of businesses, incorporating features such as user management, product listings, order processing, and administrative tools to streamline operations and enhance online presence."
       }
     ],
-    "tech_stack": ["React.js", "Vue.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind", "Django", "Flask", "FastAPI", "Node.js"],
+    "tech_stack": ["React.js", "Django", "Flask", "FastAPI", "Node.js", "Vue.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind"],
     "video": "false",
     "images": ["./services/fullstack.jpg", "./services/fullstack.jpg", "./services/fullstack.jpg", "./services/fullstack.jpg"]
   },
@@ -68,6 +68,65 @@
     "tech_stack": ["React.js", "Vue.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind"],
     "video": "false",
     "images": ["./services/frontend.jpg", "./services/frontend.jpg", "./services/frontend.jpg", "./services/frontend.jpg"]
+  },
+  {
+    "name": "Backend Development",
+    "url": "https://critiq.se/",
+    "desc": "Our backend development services focus on server-side logic, database management, and API integrations to provide a strong foundation for your applications. We ensure your systems are reliable, secure, and efficient. Our expertise includes advanced backend solutions.",
+    "small_desc": "Our backend development services focus on server-side logic to provide a strong foundation for your applications.",
+    "features": [
+      {
+        "name": "Advanced API Design",
+        "detail": "We design and develop robust and scalable APIs that serve as a reliable communication channel between different services. Our APIs are built to support complex queries, handle large data volumes, and ensure secure and efficient data exchange."
+      },
+      {
+        "name": "Web Scraping",
+        "detail": "Our team implements web scraping solutions to extract and collect data from websites. These solutions are optimized for efficiency, accuracy, and adherence to web scraping best practices and legal guidelines."
+      },
+      {
+        "name": "Serverless Integration",
+        "detail": "We integrate serverless architectures using platforms like AWS Lambda, Azure Functions, and Google Cloud Functions. This approach reduces server costs and scales automatically to meet your application's demand, ensuring optimal performance."
+      },
+      {
+        "name": "Microservices Design",
+        "detail": "Our microservices design services focus on breaking down your application into smaller, independently deployable services. This architecture enhances scalability, fault isolation, and ease of maintenance, allowing for rapid development and deployment."
+      },
+      {
+        "name": "Monolithic Design",
+        "detail": "We provide comprehensive monolithic application design and development services, ensuring a unified and cohesive codebase. Our monolithic designs are structured to optimize performance, facilitate ease of management, and provide a straightforward path for future scalability."
+      },
+      {
+        "name": "Database Design",
+        "detail": "We specialize in designing efficient, scalable, and secure database architectures. Our services include schema design, normalization, indexing strategies, and database performance tuning to ensure data integrity and optimal access speeds."
+      },
+      {
+        "name": "Payment Integrations",
+        "detail": "We integrate secure and reliable payment gateways into your applications. Our payment integration services support various platforms, including Stripe, PayPal, and Razorpay, ensuring a seamless transaction experience for your users."
+      },
+      {
+        "name": "Third-Party API Integrations",
+        "detail": "We enable seamless integration with third-party APIs, allowing your application to leverage external services and data sources. Our integration solutions ensure smooth communication, data consistency, and secure access to third-party resources."
+      },
+      {
+        "name": "CMS Integration",
+        "detail": "We integrate Content Management Systems (CMS) such as WordPress, Drupal, and Joomla with your backend infrastructure. Our CMS integration services enhance content management capabilities, streamline content workflows, and ensure compatibility with existing systems."
+      },
+      {
+        "name": "Advanced Database Design",
+        "detail": "We provide advanced database design services for complex applications. Our expertise includes designing distributed databases, implementing sharding and replication strategies, and optimizing database performance for high-load environments."
+      },
+      {
+        "name": "REST API Integration",
+        "detail": "We develop and integrate RESTful APIs into your backend systems. Our REST API integration services ensure secure, reliable, and efficient communication between your application and other services, facilitating data exchange and process automation."
+      },
+      {
+        "name": "AWS Lambda Endpoints",
+        "detail": "We implement AWS Lambda endpoints to create scalable and cost-effective serverless functions. Our solutions leverage AWS's serverless infrastructure to handle dynamic workloads, reduce latency, and minimize operational costs."
+      }
+    ],
+    "tech_stack": ["Node.js", "Django", "Flask", "FastAPI", "Rest API", "Payment Integration", "PHP CodeIgniter", "PHP", "NoSQL", "PostgreSQL", "MySQL"],
+    "video": "false",
+    "images": ["./services/backend.jpg", "./services/backend.jpg", "./services/backend.jpg", "./services/backend.jpg"]
   },
   {
     "name": "UI/UX Development",
