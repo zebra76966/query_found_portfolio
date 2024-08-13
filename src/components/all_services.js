@@ -41,6 +41,7 @@ const AllServices = ({ setCurentProj }) => {
                   className="w-100"
                   onClick={() => {
                     setCurentProj(i + 1);
+                    window.history.pushState(null, null, `/products?item=${i + 1}`);
                   }}
                 >
                   <Card data={ini} />

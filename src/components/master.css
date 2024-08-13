@@ -1105,6 +1105,12 @@ hr {
   opacity: 0;
   animation: fadein 0.5s ease-in-out forwards;
 }
+
+.fadeIn {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* backdrop-filter: blur(8px); */
+  animation: fadein 0.5s ease-in-out;
+}
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -2030,4 +2036,8 @@ hr {
   height: 100%;
   object-fit: cover;
   border-radius: 100%;
+}
+
+a {
+  cursor: pointer;
 }

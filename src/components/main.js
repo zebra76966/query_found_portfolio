@@ -31,6 +31,7 @@ const Main = () => {
         if (event.deltaY > 0) {
           // User scrolls down
           setFolio(true);
+          window.history.pushState(null, null, "/projects");
         }
       };
 
@@ -43,6 +44,7 @@ const Main = () => {
         if (window.initialTouchY > currentTouchY) {
           // User scrolls down
           setFolio(true);
+          window.history.pushState(null, null, "/projects");
         }
       };
 
@@ -53,11 +55,13 @@ const Main = () => {
           // If the user has scrolled back to the top, set portfolio to false
           if (scrollTop === 0) {
             setFolio(false);
+            window.history.pushState(null, null, "/");
           }
 
           // If the user has scrolled to the very bottom, set allServices to true
           if (scrollTop + clientHeight >= scrollHeight) {
             setAllServices(true);
+            window.history.pushState(null, null, "/products");
           }
         }
       };
@@ -70,6 +74,7 @@ const Main = () => {
           if (scrollTop === 0) {
             setFolio(true);
             setAllServices(false);
+            window.history.pushState(null, null, "/projects");
           }
         }
       };
@@ -110,9 +115,27 @@ const Main = () => {
   }, [portfolio, mobile, allServices]);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const itemValue = parseInt(searchParams.get("item"));
+
     if (window.location.pathname.includes("/projects")) {
       setFolio(true);
+      if (itemValue) {
+        if (itemValue) {
+          setTimeout(() => {
+            setCurentProj(parseInt(itemValue));
+          }, 500);
+        }
+      }
+    } else if (window.location.pathname.includes("/products")) {
+      setAllServices(true);
+      if (itemValue) {
+        setTimeout(() => {
+          setCurentProj2(parseInt(itemValue));
+        }, 500);
+      }
     } else {
+      setAllServices(false);
       setFolio(false);
     }
   }, []);
@@ -132,6 +155,7 @@ const Main = () => {
   useEffect(() => {
     if (!portfolio || !allServices) {
       setCurentProj(0);
+      setCurentProj2(0);
     }
   }, [portfolio, allServices]);
 
@@ -146,14 +170,77 @@ const Main = () => {
     }
   }, [activeProj, activeProj2]);
 
+  const [isload, setIsload] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsload(1);
+    }, 3000);
+  }, []);
+
+  // Back and Fourth ===============>
+  useEffect(() => {
+    const handlePopState = () => {
+      const currentPath = window.location.pathname;
+      const searchParams = new URLSearchParams(window.location.search);
+      const itemValue = parseInt(searchParams.get("item"));
+
+      if (currentPath.includes("/projects")) {
+        // Update state based on the "/projects" path
+
+        setFolio(true);
+        setAllServices(false);
+        if (itemValue) {
+          if (itemValue) {
+            setTimeout(() => {
+              setCurentProj(parseInt(itemValue));
+            }, 500);
+          }
+        } else {
+          setCurentProj(0);
+        }
+      } else if (currentPath.includes("/products")) {
+        // Update state based on the "/projects" path
+
+        setFolio(false);
+        setAllServices(true);
+        if (itemValue) {
+          if (itemValue) {
+            setTimeout(() => {
+              setCurentProj2(parseInt(itemValue));
+            }, 500);
+          }
+        } else {
+          setCurentProj2(0);
+        }
+      } else {
+        // Set default state or handle other paths
+
+        setFolio(false);
+        setAllServices(false);
+        setCurentProj(0);
+      }
+    };
+
+    // Add event listener for popstate event
+    window.addEventListener("popstate", handlePopState);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []); // Empty dependency array to ensure it runs only once on mount
+  // Back and Foruth ENds
+
   return (
     <>
-      {console.log(activeProj)}
-      <div className="startload">
-        <div className="h-100 d-flex align-items-center justify-content-center">
-          <h2 className="display-5 ">Loading...</h2>
+      {isload == 0 && (
+        <div className="startload">
+          <div className="h-100 d-flex align-items-center justify-content-center">
+            <h2 className="display-5 ">Loading...</h2>
+          </div>
         </div>
-      </div>
+      )}
       {mobile && (
         <div className="logo-box">
           <img src="./logo.png" />
@@ -170,7 +257,18 @@ const Main = () => {
             variants={fadeUpVariants}
             transition={{ duration: 0.5, delay: 3 }}
           >
-            <Header mobile={mobile} setFolio={(e) => setFolio(e)} setCurentProj={(e) => setCurentProj(e)} folio={portfolio} setAllServices={(e) => setAllServices(e)} allServices={allServices} />
+            <Header
+              mobile={mobile}
+              setFolio={(e) => setFolio(e)}
+              setCurentProj={(e) => {
+                setCurentProj(e);
+                setCurentProj(e);
+              }}
+              folio={portfolio}
+              setAllServices={(e) => setAllServices(e)}
+              allServices={allServices}
+              activeProj={activeProj}
+            />
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
@@ -189,7 +287,7 @@ const Main = () => {
           <div className=" col-xxl-7 position-relative">
             <Hero mobile={mobile} />
 
-            <Bar mobile={mobile} />
+            <Bar mobile={mobile} origin={"home"} />
 
             {mobile && (
               <>
@@ -216,7 +314,7 @@ const Main = () => {
       </div>
 
       <div ref={containerRef} className={`container-fluid dets ${activeProj !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
-        <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} setCurentProj={(e) => setCurentProj(e)} />
+        <Details data={datas[activeProj !== 0 ? activeProj - 1 : activeProj]} setCurentProj={(e) => setCurentProj(e)} origin={"projects"} mobile={mobile} />
       </div>
       {/* Portfolio End====================> */}
 
@@ -226,7 +324,7 @@ const Main = () => {
       </div>
 
       <div ref={containerRef} className={`container-fluid allServicedets ${activeProj2 !== 0 ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
-        <Details data={datas2[activeProj2 !== 0 ? activeProj2 - 1 : activeProj2]} setCurentProj={(e) => setCurentProj2(e)} />
+        <Details data={datas2[activeProj2 !== 0 ? activeProj2 - 1 : activeProj2]} setCurentProj={(e) => setCurentProj2(e)} origin={"products"} mobile={mobile} />
       </div>
       {/* Services End===================> */}
 
@@ -276,6 +374,14 @@ const Main = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="getIntouch" tabindex="-1" aria-labelledby="getIntouch" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <Bar mobile={mobile} origin={"details"} />
           </div>
         </div>
       </div>

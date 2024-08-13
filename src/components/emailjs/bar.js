@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
-const Bar = ({ mobile }) => {
+const Bar = ({ mobile, origin, setBox }) => {
   const [email, setEmail] = useState({
     message: "",
     file: "",
@@ -112,141 +112,222 @@ const Bar = ({ mobile }) => {
           </div>
         </div>
       )}
-      <form onSubmit={handleSubmit} className="position-relative">
-        {email.file !== "" && (
-          <div className="dialogLoder d-flex align-items-center justify-content-center">
-            {fileload && (
-              <div className="spinner me-3">
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-                <div class="spinner__dot"></div>
-              </div>
-            )}
-            {email.file !== "" && <img src="./icons/doc_b.svg"></img>}
-          </div>
-        )}
-        {!mobile && (
-          <div className="mb-3 position-relative">
-            <input
-              type="text"
-              value={email.message}
-              onChange={(e) => setEmail({ ...email, message: e.target.value })}
-              className="form-control rounded-pill txtcolor-primary p-3 bar"
-              id="message"
-              aria-describedby="message"
-              placeholder=" Get a Quote or Just say Hi!..."
-            />
-
-            <label htmlFor="formFileLg" style={{ cursor: "pointer" }} className="p-3 icon-attach border-0  position-relative">
-              <img src="./icons/attach.svg" />
-
-              <input className="form-file" id="formFileLg" type="file" hidden onChange={handleFileChange} />
-            </label>
-
-            {fileError && <div className="text-danger">{fileError}</div>}
-
-            {email.message.length > 3 ? (
-              <button type="button" className="p-3 icon-send border-0" data-bs-toggle="modal" data-bs-target="#formModal">
-                <img src="./icons/send.svg" />
-              </button>
-            ) : (
-              <button type="button" className="p-3 icon-send border-0 disabled" data-bs-toggle="modal" data-bs-target="#formModal" disabled>
-                <img src="./icons/send.svg" />
-              </button>
-            )}
-          </div>
-        )}
-
-        {mobile && (
-          <div className="mobilebar">
-            <div className="mb-3 position-relative">
-              <input
-                type="text"
-                value={email.message}
-                onChange={(e) => setEmail({ ...email, message: e.target.value })}
-                className="form-control rounded-pill txtcolor-primary p-3 bar"
-                id="message"
-                aria-describedby="message"
-                placeholder=" Get a Quote or Just say Hi!..."
-              />
-
-              <label htmlFor="formFileLg" style={{ cursor: "pointer" }} className="p-3 icon-attach border-0  position-relative">
-                <img src="./icons/attach.svg" />
-
-                <input className="form-file" id="formFileLg" type="file" hidden onChange={handleFileChange} />
-              </label>
-
-              {fileError && <div className="text-danger">{fileError}</div>}
-
-              <button type="button" className="p-3 icon-send border-0" data-bs-toggle="modal" data-bs-target="#formModal">
-                <img src="./icons/send.svg" />
-              </button>
+      {!thanks && (
+        <form onSubmit={handleSubmit} className="position-relative">
+          {email.file !== "" && (
+            <div className="dialogLoder d-flex align-items-center justify-content-center">
+              {fileload && (
+                <div className="spinner me-3">
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                  <div class="spinner__dot"></div>
+                </div>
+              )}
+              {email.file !== "" && <img src="./icons/doc_b.svg"></img>}
             </div>
-          </div>
-        )}
-        {email.message.length > 3 && (
-          <div className="container-fluid">
-            <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
-              <div class="modal-dialog ">
-                <div class="modal-content  bgcolor-secondary p-lg-4 p-2" style={{ borderRadius: "50px" }}>
-                  <div class="modal-header border-0">
-                    <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " data-bs-dismiss="modal" aria-label="Close">
-                      <img src="./icons/close.svg" />
+          )}
+          {origin == "home" && (
+            <>
+              {!mobile && (
+                <div className="mb-3 position-relative">
+                  <input
+                    type="text"
+                    value={email.message}
+                    onChange={(e) => setEmail({ ...email, message: e.target.value })}
+                    className="form-control rounded-pill txtcolor-primary p-3 bar"
+                    id="message"
+                    aria-describedby="message"
+                    placeholder=" Get a Quote or Just say Hi!..."
+                  />
+
+                  <label htmlFor="formFileLg" style={{ cursor: "pointer" }} className="p-3 icon-attach border-0  position-relative">
+                    <img src="./icons/attach.svg" />
+
+                    <input className="form-file" id="formFileLg" type="file" hidden onChange={handleFileChange} />
+                  </label>
+
+                  {fileError && <div className="text-danger">{fileError}</div>}
+
+                  {email.message.length > 3 ? (
+                    <button type="button" className="p-3 icon-send border-0" data-bs-toggle="modal" data-bs-target="#formModal">
+                      <img src="./icons/send.svg" />
+                    </button>
+                  ) : (
+                    <button type="button" className="p-3 icon-send border-0 disabled" data-bs-toggle="modal" data-bs-target="#formModal" disabled>
+                      <img src="./icons/send.svg" />
+                    </button>
+                  )}
+                </div>
+              )}
+
+              {mobile && (
+                <div className="mobilebar">
+                  <div className="mb-3 position-relative">
+                    <input
+                      type="text"
+                      value={email.message}
+                      onChange={(e) => setEmail({ ...email, message: e.target.value })}
+                      className="form-control rounded-pill txtcolor-primary p-3 bar"
+                      id="message"
+                      aria-describedby="message"
+                      placeholder=" Get a Quote or Just say Hi!..."
+                    />
+
+                    <label htmlFor="formFileLg" style={{ cursor: "pointer" }} className="p-3 icon-attach border-0  position-relative">
+                      <img src="./icons/attach.svg" />
+
+                      <input className="form-file" id="formFileLg" type="file" hidden onChange={handleFileChange} />
+                    </label>
+
+                    {fileError && <div className="text-danger">{fileError}</div>}
+
+                    <button type="button" className="p-3 icon-send border-0" data-bs-toggle="modal" data-bs-target="#formModal">
+                      <img src="./icons/send.svg" />
                     </button>
                   </div>
-                  <div class="modal-body p-3">
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label txtcolor-primary">
-                        Email address
-                      </label>
-                      <input
-                        type="email"
-                        class="form-control rounded-pill txtcolor-primary p-3"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                        onChange={(e) => {
-                          setEmail({ ...email, uemail: e.target.value });
-                        }}
-                        placeholder="Enter your Email"
-                        required
-                      />
-                      <div id="emailHelp" class="form-text txtcolor-primary">
-                        We'll never share your email with anyone else.
-                      </div>
-                    </div>
+                </div>
+              )}
+            </>
+          )}
 
-                    <div class="mb-3">
-                      <label for="phone" class="form-label txtcolor-primary">
-                        Phone (Optional)
-                      </label>
-                      <input
-                        type="password"
-                        class="form-control rounded-pill txtcolor-primary p-3"
-                        id="phone"
-                        onChange={(e) => {
-                          setEmail({ ...email, uphone: e.target.value });
-                        }}
-                        placeholder="Enter your Phone number"
-                      />
-                    </div>
-
-                    <div className="w-100 text-center mt-4">
-                      <button type="submit" className="p-3 btn rounded-pill fw-bold px-5 txtcolor-secondary bgcolor-primary  mx-auto border-0" data-bs-dismiss="modal" aria-label="Close">
-                        Submit
+          {email.message.length > 3 && origin == "home" ? (
+            <div className="container-fluid">
+              <div class={`modal fade`} id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+                <div class="modal-dialog ">
+                  <div class="modal-content  bgcolor-secondary p-lg-4 p-2" style={{ borderRadius: "50px" }}>
+                    <div class="modal-header border-0">
+                      <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " data-bs-dismiss="modal" aria-label="Close">
+                        <img src="./icons/close.svg" />
                       </button>
+                    </div>
+                    <div class="modal-body p-3">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label txtcolor-primary">
+                          Email address
+                        </label>
+                        <input
+                          type="email"
+                          class="form-control rounded-pill txtcolor-primary p-3"
+                          id="exampleInputEmail1"
+                          aria-describedby="emailHelp"
+                          onChange={(e) => {
+                            setEmail({ ...email, uemail: e.target.value });
+                          }}
+                          placeholder="Enter your Email"
+                          required
+                        />
+                        <div id="emailHelp" class="form-text txtcolor-primary">
+                          We'll never share your email with anyone else.
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="phone" class="form-label txtcolor-primary">
+                          Phone (Optional)
+                        </label>
+                        <input
+                          type="password"
+                          class="form-control rounded-pill txtcolor-primary p-3"
+                          id="phone"
+                          onChange={(e) => {
+                            setEmail({ ...email, uphone: e.target.value });
+                          }}
+                          placeholder="Enter your Phone number"
+                        />
+                      </div>
+
+                      <div className="w-100 text-center mt-4">
+                        <button type="submit" className="p-3 btn rounded-pill fw-bold px-5 txtcolor-secondary bgcolor-primary  mx-auto border-0" data-bs-dismiss="modal" aria-label="Close">
+                          Submit
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        )}
-      </form>
+          ) : (
+            origin == "details" && (
+              <div className="container-fluid">
+                <div class={`modal fade show`} id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true" style={{ display: "block" }} role={"dialog"}>
+                  <div class="modal-dialog ">
+                    <div class="modal-content  bgcolor-secondary p-lg-4 p-2" style={{ borderRadius: "50px" }}>
+                      <div class="modal-header border-0">
+                        <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " data-bs-dismiss="modal" aria-label="Close">
+                          <img src="./icons/close.svg" />
+                        </button>
+                      </div>
+                      <div class="modal-body p-3">
+                        <div class="mb-3">
+                          <label for="message2" class="form-label txtcolor-primary">
+                            Message
+                          </label>
+                          <textarea
+                            class="form-control rounded txtcolor-primary p-3"
+                            type="text"
+                            value={email.message}
+                            onChange={(e) => setEmail({ ...email, message: e.target.value })}
+                            id="message2"
+                            rows={3}
+                            aria-describedby="message"
+                            placeholder=" Get a Quote or Just say Hi!..."
+                          ></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label txtcolor-primary">
+                            Email address
+                          </label>
+                          <input
+                            type="email"
+                            class="form-control rounded-pill txtcolor-primary p-3"
+                            id="exampleInputEmail1"
+                            aria-describedby="emailHelp"
+                            onChange={(e) => {
+                              setEmail({ ...email, uemail: e.target.value });
+                            }}
+                            placeholder="Enter your Email"
+                            required
+                          />
+                          <div id="emailHelp" class="form-text txtcolor-primary">
+                            We'll never share your email with anyone else.
+                          </div>
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="phone" class="form-label txtcolor-primary">
+                            Phone (Optional)
+                          </label>
+                          <input
+                            type="password"
+                            class="form-control rounded-pill txtcolor-primary p-3"
+                            id="phone"
+                            onChange={(e) => {
+                              setEmail({ ...email, uphone: e.target.value });
+                            }}
+                            placeholder="Enter your Phone number"
+                          />
+                        </div>
+
+                        <div className="w-100 text-center mt-4">
+                          <button type="submit" className="p-3 btn rounded-pill fw-bold px-5 txtcolor-secondary bgcolor-primary  mx-auto border-0">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          )}
+        </form>
+      )}
 
       {thanks && (
         <div className="container-fluid">
@@ -254,7 +335,7 @@ const Bar = ({ mobile }) => {
             <div class="modal-dialog ">
               <div class="modal-content  bgcolor-secondary p-lg-4 p-2" style={{ borderRadius: "50px" }}>
                 <div class="modal-header border-0">
-                  <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " onClick={() => setThanks(false)}>
+                  <button type="button" className="btn ms-auto bgcolor-primary p-3 rounded-circle " onClick={() => setThanks(false)} data-bs-dismiss="modal" aria-label="Close">
                     <img src="./icons/close.svg" />
                   </button>
                 </div>

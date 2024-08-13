@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allServices }) => {
+const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allServices, activeProj }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
 
@@ -8,7 +8,11 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
     if (window.location.pathname.includes("/projects")) {
       setFolio(true);
       setActive("assets");
+    } else if (window.location.pathname.includes("/products")) {
+      setAllServices(true);
+      setActive("about");
     } else {
+      setAllServices(false);
       setFolio(false);
       setActive("home");
     }
@@ -28,38 +32,79 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
       setActive("home");
     }
   }, [folio, allServices]);
+
+  // Back and Fourth ===============>
+  useEffect(() => {
+    const handlePopState = () => {
+      const currentPath = window.location.pathname;
+
+      if (currentPath.includes("/projects")) {
+        // Update state based on the "/projects" path
+
+        setFolio(true);
+        setAllServices(false);
+        setCurentProj(0);
+        setActive("assets");
+      } else if (currentPath.includes("/products")) {
+        // Update state based on the "/projects" path
+
+        setFolio(false);
+        setAllServices(true);
+        setCurentProj(0);
+        setActive("about");
+      } else {
+        // Set default state or handle other paths
+
+        setFolio(false);
+        setAllServices(false);
+        setCurentProj(0);
+        setActive("home");
+      }
+    };
+
+    // Add event listener for popstate event
+    window.addEventListener("popstate", handlePopState);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []); // Empty dependency array to ensure it runs only once on mount
+  // Back and Foruth ENds
+
   return (
     <>
       {!mobile && (
         <div class={`sidenav ${active == "home" ? "hnav1" : active == "assets" ? "hnav2" : "hnav3"} d-flex flex-column rounded-pill p-2 px-3`}>
           <div class="flex-column mb-auto pt-2 ">
             <a
-              href="#"
               className="mx-auto mb-4 rounded-circle bgcolor-secodary d-flex align-items-center justify-content-center"
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("home");
                 setFolio(false);
                 setAllServices(false);
+                setCurentProj(0);
+                window.history.pushState(null, null, "/");
               }}
             >
               <img src="./logo.png" className="rounded-circle border-0 bgcolor-secondary" style={{ height: "70px", width: "70px", objectFit: "cover" }} />
             </a>
             <hr className="border border-light " />
             <a
-              href="#"
               className="mx-auto mt-4 mb-4 rounded-circle bgcolor-primary d-flex align-items-center justify-content-center"
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
                 setActive("home");
                 setFolio(false);
                 setAllServices(false);
+                setCurentProj(0);
+                window.history.pushState(null, null, "/");
               }}
             >
               <img src="./icons/home_a.svg" />
             </a>
             <a
-              href="#"
               className={`mx-auto position-relative mt-4 mb-4 rounded-circle ${
                 active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"
               } d-flex align-items-center justify-content-center`}
@@ -69,6 +114,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                 setFolio(true);
                 setAllServices(false);
                 setCurentProj(0);
+                window.history.pushState(null, null, "/projects");
               }}
             >
               {active == "assets" || active == "about" ? (
@@ -86,7 +132,6 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
               )}
             </a>
             <a
-              href="#"
               className={`mx-auto position-relative mt-4 mb-4 rounded-circle ${active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
               style={{ height: "70px", width: "70px" }}
               onClick={() => {
@@ -94,6 +139,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                 setFolio(false);
                 setAllServices(true);
                 setCurentProj(0);
+                window.history.pushState(null, null, "/products");
               }}
             >
               {active == "about" ? (
@@ -101,12 +147,14 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
               ) : (
                 <>
                   <img src="./icons/doc_b.svg" className="ms-1" />
-                  <p
-                    className="bgcolor-secondary txtcolor-primary rounded-pill text-center py-1 "
-                    style={{ paddingLeft: "0.7em", paddingRight: "0.7em", position: "absolute", top: "50%", right: "-90px", transform: "translateY(-50%)" }}
-                  >
-                    Services
-                  </p>
+                  {activeProj == 0 && (
+                    <p
+                      className="bgcolor-secondary txtcolor-primary rounded-pill text-center py-1 "
+                      style={{ paddingLeft: "0.7em", paddingRight: "0.7em", position: "absolute", top: "50%", right: "-90px", transform: "translateY(-50%)" }}
+                    >
+                      Services
+                    </p>
+                  )}
                 </>
               )}
             </a>
@@ -195,13 +243,15 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
           <div class="d-flex mb-auto pt-2 ">
             <div className="w-100 text-center pb-2">
               <a
-                href="#"
                 className="mx-auto mt-2 rounded-circle bgcolor-primary d-flex align-items-center justify-content-center"
                 style={{ height: "70px", width: "70px" }}
                 onClick={() => {
                   setActive("home");
                   setFolio(false);
                   setMobileAactive(false);
+                  setCurentProj(0);
+                  setAllServices(false);
+                  window.history.pushState(null, null, "/");
                 }}
               >
                 <img src="./icons/home_a.svg" />
@@ -210,7 +260,6 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
             </div>
             <div className="w-100 text-center pb-2">
               <a
-                href="#"
                 className={`mx-auto mt-2  rounded-circle ${active == "assets" || active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
                 style={{ height: "70px", width: "70px" }}
                 onClick={() => {
@@ -218,6 +267,8 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                   setFolio(true);
                   setCurentProj(0);
                   setMobileAactive(false);
+                  setAllServices(false);
+                  window.history.pushState(null, null, "/projects");
                 }}
               >
                 {active == "assets" || active == "about" ? <img src="./icons/puzzle_a.svg" className="ms-1" /> : <img src="./icons/puzzle_b.svg" className="ms-1" />}
@@ -226,18 +277,20 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
             </div>
             <div className="w-100 text-center pb-2">
               <a
-                href="#"
                 className={`mx-auto  mt-2 rounded-circle ${active == "about" ? "bgcolor-primary" : "bgcolor-secondary"} d-flex align-items-center justify-content-center`}
                 style={{ height: "70px", width: "70px" }}
                 onClick={() => {
                   setActive("about");
                   setFolio(false);
                   setMobileAactive(false);
+                  setAllServices(true);
+                  setCurentProj(0);
+                  window.history.pushState(null, null, "/products");
                 }}
               >
                 {active == "about" ? <img src="./icons/doc_a.svg" className="ms-1" /> : <img src="./icons/doc_b.svg" className="ms-1" />}
               </a>
-              <span className={`${active == "assets" || active == "about" ? "txtcolor-primary" : "txt-secondary"} fw-bold`}>ABOUT</span>
+              <span className={`${active == "assets" || active == "about" ? "txtcolor-primary" : "txt-secondary"} fw-bold`}>SERVICES</span>
             </div>
           </div>
         </div>

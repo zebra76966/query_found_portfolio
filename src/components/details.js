@@ -1,6 +1,6 @@
 import "./details.css";
-import React, { useState, useEffect } from "react";
-import Card from "./cards";
+import React, { useState } from "react";
+import Bar from "./emailjs/bar";
 import { motion } from "framer-motion";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -8,8 +8,9 @@ const fadeUpVariants = {
   exit: { opacity: 0, y: 20 },
 };
 
-const Details = ({ data, setCurentProj }) => {
+const Details = ({ data, setCurentProj, origin, mobile }) => {
   const [stopanim, setStopAnim] = useState(false);
+  const [box, setBox] = useState(false);
 
   return (
     <>
@@ -33,10 +34,15 @@ const Details = ({ data, setCurentProj }) => {
             >
               <i className="fa fa-arrow-left"></i>
             </button>
-            <p className="py-0 my-0 ms-2 fs-5 txtcolor-secondary">Go back to Projects</p>
+            <p className="py-0 my-0 ms-2 fs-5 txtcolor-secondary">Go back to {origin == "projects" ? "Projects" : "Services"}</p>
           </div>
 
-          <button target="_blank" className="btn fs-5 p-lg-3 p-2 px-lg-4 px-3 bgcolor-secondary txtcolor-primary rounded-pill border border-1 secondary-border ms-auto get-in-touch">
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#getIntouch"
+            target="_blank"
+            className="btn fs-5 p-lg-3 p-2 px-lg-4 px-3 bgcolor-secondary txtcolor-primary rounded-pill border border-1 secondary-border ms-auto get-in-touch"
+          >
             <div className="pulse"></div>
             <div className="pulse"></div>
             <div className="pulse"></div>
@@ -76,11 +82,21 @@ const Details = ({ data, setCurentProj }) => {
 
             <div className="col-lg-6 text-start mt-lg-5 pt-lg-5 pt-3 mt-3">
               <div className="w-100 d-flex justify-content-between">
-                <a href={data.url} target="_blank" className="btn btn-lg fs-3 p-md-3 p-2 px-md-5 px-4 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border">
-                  <span className="me-2"> Visit Website </span>
-                  <i className="fa fa-external-link-square fs-2"></i>
-                </a>
-
+                {origin == "projects" ? (
+                  <a href={data.url} target="_blank" className="btn btn-lg fs-3 p-md-3 p-2 px-md-5 px-4 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border">
+                    <span className="me-2"> Visit Website </span>
+                    <i className="fa fa-external-link-square fs-2"></i>
+                  </a>
+                ) : (
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#getIntouch"
+                    className="btn btn-lg fs-3 p-md-3 p-2 px-md-5 px-4 bgcolor-secondary txtcolor-primary me-2 rounded-pill border border-1 secondary-border"
+                  >
+                    <span className="me-2"> Request Service </span>
+                    <i className="fa fa-external-link-square fs-2"></i>
+                  </button>
+                )}
                 <div class="scrolldown d-lg-block d-none">
                   <div class="chevrons">
                     <div class="chevrondown"></div>
@@ -189,7 +205,12 @@ const Details = ({ data, setCurentProj }) => {
                 </h1>
 
                 <div className="text-center w-100 my-4 py-5">
-                  <button target="_blank" className="btn fs-4 p-md-4 p-3 px-md-5 px-4 bgcolor-secondary txtcolor-plain rounded-pill border border-1 secondary-border mx-auto ">
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#getIntouch"
+                    target="_blank"
+                    className="btn fs-4 p-md-4 p-3 px-md-5 px-4 bgcolor-secondary txtcolor-plain rounded-pill border border-1 secondary-border mx-auto "
+                  >
                     <div className="pulse"></div>
                     <div className="pulse"></div>
                     <div className="pulse"></div>
