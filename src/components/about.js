@@ -130,7 +130,7 @@ const About = ({ mobile }) => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="col-12 mt-5 pt-2">
               <div className="w-100 txtcolor-secondary my-4">
-                <h1 className="display-4 py-2 fw-bold">What we Provide</h1>
+                <h1 className="display-4 py-2 fw-bold">Our Services</h1>
               </div>
               <div className={`features-section ${stopanim ? "" : "animated"} my-lg-5 my-3`}>
                 <div className="features-section-inner" onMouseOver={() => setStopAnim(true)} onMouseLeave={() => setStopAnim(false)}>
