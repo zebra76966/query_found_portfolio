@@ -10,6 +10,7 @@ import Details from "./details";
 import datas from "./projects.json";
 import datas2 from "./services.json";
 import AllServices from "./all_services";
+import About from "./about";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -23,8 +24,11 @@ const Main = () => {
   const [activeProj2, setCurentProj2] = useState(0);
   const [allServices, setAllServices] = useState(false);
 
+  const [about, setAbout] = useState(false);
+
   const portfolioRef = useRef(null);
   const servicesRef = useRef(null);
+  const aboutRef = useState(null);
   useEffect(() => {
     if (!mobile) {
       const handleWheel = (event) => {
@@ -68,13 +72,32 @@ const Main = () => {
 
       const handleServicesScroll = () => {
         if (servicesRef.current) {
-          const { scrollTop } = servicesRef.current;
+          const { scrollTop, clientHeight, scrollHeight } = servicesRef.current;
 
           // If the user has scrolled back to the top, set portfolio to true
           if (scrollTop === 0) {
             setFolio(true);
             setAllServices(false);
-            window.history.pushState(null, null, "/projects");
+            window.history.pushState(null, null, "/products");
+          }
+
+          // If the user has scrolled to the very bottom, set allServices to true
+          if (scrollTop + clientHeight >= scrollHeight) {
+            setAbout(true);
+            window.history.pushState(null, null, "/about");
+          }
+        }
+      };
+
+      const handleAboutScroll = () => {
+        if (aboutRef.current) {
+          const { scrollTop, clientHeight, scrollHeight } = aboutRef.current;
+
+          // If the user has scrolled back to the top, set portfolio to true
+          if (scrollTop === 0) {
+            setAllServices(true);
+            setAbout(false);
+            window.history.pushState(null, null, "/products");
           }
         }
       };
@@ -86,6 +109,7 @@ const Main = () => {
       } else {
         const currentPortfolioRef = portfolioRef.current;
         const currentServicesRef = servicesRef.current;
+        const currentAboutRef = aboutRef.current;
 
         if (currentPortfolioRef) {
           const scrollTop = currentPortfolioRef.scrollTop;
@@ -97,6 +121,11 @@ const Main = () => {
           const scrollTop = currentServicesRef.scrollTop;
           currentServicesRef.scrollTop = scrollTop + 20;
           currentServicesRef.addEventListener("scroll", handleServicesScroll);
+        }
+        if (currentAboutRef) {
+          const scrollTop = currentAboutRef.scrollTop;
+          currentAboutRef.scrollTop = scrollTop + 20;
+          currentAboutRef.addEventListener("scroll", handleAboutScroll);
         }
       }
 
@@ -110,9 +139,12 @@ const Main = () => {
         if (servicesRef.current) {
           servicesRef.current.removeEventListener("scroll", handleServicesScroll);
         }
+        if (aboutRef.current) {
+          aboutRef.current.removeEventListener("scroll", handleAboutScroll);
+        }
       };
     }
-  }, [portfolio, mobile, allServices]);
+  }, [portfolio, mobile, allServices, about]);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -134,9 +166,18 @@ const Main = () => {
           setCurentProj2(parseInt(itemValue));
         }, 500);
       }
+    } else if (window.location.pathname.includes("/about")) {
+      setAbout(true);
+      console.log("HERE");
+      // if (itemValue) {
+      //   setTimeout(() => {
+      //     setCurentProj2(parseInt(itemValue));
+      //   }, 500);
+      // }
     } else {
       setAllServices(false);
       setFolio(false);
+      setAbout(false);
     }
   }, []);
 
@@ -213,11 +254,27 @@ const Main = () => {
         } else {
           setCurentProj2(0);
         }
+      } else if (currentPath.includes("/about")) {
+        // Update state based on the "/projects" path
+
+        setFolio(false);
+        setAllServices(false);
+        setAbout(true);
+        // if (itemValue) {
+        //   if (itemValue) {
+        //     setTimeout(() => {
+        //       setCurentProj2(parseInt(itemValue));
+        //     }, 500);
+        //   }
+        // } else {
+        //   setCurentProj2(0);
+        // }
       } else {
         // Set default state or handle other paths
 
         setFolio(false);
         setAllServices(false);
+        setAbout(false);
         setCurentProj(0);
       }
     };
@@ -268,6 +325,8 @@ const Main = () => {
               setAllServices={(e) => setAllServices(e)}
               allServices={allServices}
               activeProj={activeProj}
+              setAbout={(e) => setAbout(e)}
+              about={about}
             />
 
             {!mobile && (
@@ -328,6 +387,12 @@ const Main = () => {
       </div>
       {/* Services End===================> */}
 
+      {/* ABout Start ==============================================> */}
+      <div ref={aboutRef} className={`container-fluid allServicedets portfolio ${about == true ? "in" : "out"} thinScroll h-100`} style={{ zIndex: 100 }}>
+        <About mobile={mobile} />
+      </div>
+      {/* About End ================================================> */}
+
       <div className="container-fluid">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl">
@@ -369,6 +434,19 @@ const Main = () => {
                     <source src={datas[activeProj - 1].video} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
+                ) : about ? (
+                  <div class="modal-body">
+                    <iframe
+                      width="100%"
+                      height="720"
+                      src="https://www.youtube.com/embed/0OojfeXlsWE"
+                      title="Final Edit 1"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 ) : (
                   <h4 className="display-6 txtcolor-primary text-center py-5">Video not available at the moment.</h4>
                 )}

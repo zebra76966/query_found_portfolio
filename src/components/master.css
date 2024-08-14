@@ -103,7 +103,7 @@ body {
 .desk-left-socials {
   /* font-family: "steelfish-bi"; */
   /* font-size: 70px; */
-  bottom: 15%;
+  bottom: 6%;
   left: 2%;
   height: auto;
   display: flex;
@@ -288,7 +288,7 @@ body {
 /* Side nav */
 .sidenav {
   height: 100%;
-  max-height: 415px;
+  max-height: 508px;
   width: 100%;
   max-width: 120px;
   transition: 0.5s;
@@ -304,7 +304,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 53%;
+  height: 43%;
   width: 100%;
   max-width: 125px;
   z-index: -1;
@@ -318,7 +318,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 76%;
+  height: 61%;
   width: 100%;
   max-width: 125px;
   z-index: -1;
@@ -326,6 +326,20 @@ body {
 }
 
 .sidenav.hnav3::before {
+  content: " ";
+  background-color: #351518;
+  border-radius: 50rem !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 79%;
+  width: 100%;
+  max-width: 125px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidenav.hnav4::before {
   content: " ";
   background-color: #351518;
   border-radius: 50rem !important;
@@ -1385,6 +1399,10 @@ hr {
     -webkit-line-clamp: 2 !important;
     line-clamp: 2 !important;
   }
+  .sidenav {
+    transform: scale(0.8);
+    transform-origin: top;
+  }
 }
 @media screen and (max-height: 796px) {
   .project-enlarge .video-container {
@@ -2040,4 +2058,12 @@ hr {
 
 a {
   cursor: pointer;
+}
+
+.txtcolor-plain.link:hover {
+  color: #e1d8d2;
+}
+
+.border-dashed {
+  border: 6px dashed #351518;
 }
