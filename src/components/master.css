@@ -501,11 +501,11 @@ body {
   border: 2px solid #351518;
   height: 88px;
   padding-left: 100px !important;
-  color: #ee9747 !important;
+  color: #351518 !important;
   font-weight: 400;
 }
 .bar::placeholder {
-  color: #ee9747;
+  color: #351518;
   opacity: 1; /* Firefox */
 }
 
