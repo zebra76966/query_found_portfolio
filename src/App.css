@@ -40,6 +40,7 @@
 .tbar {
   animation: inout 5s ease-in-out;
   opacity: 0;
+  z-index: 99;
 }
 
 .tbar:nth-child(1) {
@@ -58,6 +59,10 @@
 .tbar:nth-child(4) {
   animation-delay: 25s;
   animation-fill-mode: backwards;
+}
+.tbar:nth-child(5) {
+  animation-delay: 30s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes inout {
