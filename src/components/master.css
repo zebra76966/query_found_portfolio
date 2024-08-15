@@ -1714,6 +1714,10 @@ hr {
     transform: scale(0.8);
   }
 
+  .tbar .btn {
+    font-size: 1em !important;
+  }
+
   .mobile.left-text {
     font-size: 30px;
     top: 33%;
