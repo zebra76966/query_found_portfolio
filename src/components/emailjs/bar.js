@@ -139,7 +139,7 @@ const Bar = ({ mobile, origin, setBox }) => {
                     type="text"
                     value={email.message}
                     onChange={(e) => setEmail({ ...email, message: e.target.value })}
-                    className="form-control rounded-pill txtcolor-primary p-3 bar"
+                    className="form-control rounded-pill txtcolor-secondary p-3 bar"
                     id="message"
                     aria-describedby="message"
                     placeholder=" Get a Quote or Just say Hi!..."
@@ -172,7 +172,7 @@ const Bar = ({ mobile, origin, setBox }) => {
                       type="text"
                       value={email.message}
                       onChange={(e) => setEmail({ ...email, message: e.target.value })}
-                      className="form-control rounded-pill txtcolor-primary p-3 bar"
+                      className="form-control rounded-pill txtcolor-secondary p-3 bar"
                       id="message"
                       aria-describedby="message"
                       placeholder=" Get a Quote or Just say Hi!..."
@@ -268,7 +268,7 @@ const Bar = ({ mobile, origin, setBox }) => {
                             Message
                           </label>
                           <textarea
-                            class="form-control rounded txtcolor-primary p-3"
+                            class="form-control rounded txtcolor-secondary p-3"
                             type="text"
                             value={email.message}
                             onChange={(e) => setEmail({ ...email, message: e.target.value })}
