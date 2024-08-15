@@ -26,7 +26,7 @@ const About = ({ mobile }) => {
           className="p-md-3 p-4 ps-lg-3 ps-3 bgcolor-plain d-md-flex align-items-center justify-content-between text-lg-auto text-end position-sticky top-0 start-0"
           style={{ zIndex: "99", width: "90%", borderRadius: "0 0 20px 20px" }}
         >
-          <div className="d-flex align-items-center justify-content-lg-start justify-content-end topBar ps-md-0 ps-1">
+          {/* <div className="d-flex align-items-center justify-content-lg-start justify-content-end topBar ps-md-0 ps-1">
             <button
               //   onClick={() => {
               //     setCurentProj(0);
@@ -36,7 +36,7 @@ const About = ({ mobile }) => {
               <i className="fa fa-arrow-left"></i>
             </button>
             <p className="py-0 my-0 ms-2 fs-5 txtcolor-secondary">Go back to</p>
-          </div>
+          </div> */}
 
           <button
             data-bs-toggle="modal"
@@ -207,7 +207,7 @@ const About = ({ mobile }) => {
 
             <motion.div
               className="col-lg-5 mt-5 txtcolor-secondary  text-center   ps-4"
-              style={{ borderRadius: "1.5em" }}
+              style={{ borderRadius: "1.5em", minHeight: "500px" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}

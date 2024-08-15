@@ -10,6 +10,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
       setActive("assets");
     } else if (window.location.pathname.includes("/products")) {
       setAllServices(true);
+
       setActive("service");
     } else if (window.location.pathname.includes("/about")) {
       setAbout(true);
@@ -33,58 +34,14 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
       setActive("service");
     } else if (!folio && !allServices && about) {
       setActive("about");
+    } else if (!folio && allServices && about) {
+      setActive("about");
+    } else if (folio && !allServices && about) {
+      setActive("about");
     } else {
       setActive("home");
     }
   }, [folio, allServices, about]);
-
-  // Back and Fourth ===============>
-  useEffect(() => {
-    const handlePopState = () => {
-      const currentPath = window.location.pathname;
-
-      if (currentPath.includes("/projects")) {
-        // Update state based on the "/projects" path
-
-        setFolio(true);
-        setAllServices(false);
-        setCurentProj(0);
-        setActive("assets");
-      } else if (currentPath.includes("/products")) {
-        // Update state based on the "/projects" path
-
-        setFolio(false);
-        setAllServices(true);
-        setCurentProj(0);
-        setActive("service");
-      } else if (currentPath.includes("/about")) {
-        // Update state based on the "/projects" path
-
-        setFolio(false);
-        setAllServices(false);
-        setAbout(true);
-        setCurentProj(0);
-        setActive("about");
-      } else {
-        // Set default state or handle other paths
-
-        setFolio(false);
-        setAllServices(false);
-        setAbout(false);
-        setCurentProj(0);
-        setActive("home");
-      }
-    };
-
-    // Add event listener for popstate event
-    window.addEventListener("popstate", handlePopState);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, []); // Empty dependency array to ensure it runs only once on mount
-  // Back and Foruth ENds
 
   return (
     <>
@@ -133,6 +90,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                 setActive("assets");
                 setFolio(true);
                 setAllServices(false);
+                setAbout(false);
                 setCurentProj(0);
                 window.history.pushState(null, null, "/projects");
               }}

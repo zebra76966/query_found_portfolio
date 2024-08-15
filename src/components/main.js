@@ -11,6 +11,7 @@ import datas from "./projects.json";
 import datas2 from "./services.json";
 import AllServices from "./all_services";
 import About from "./about";
+import TopBar from "./topbar";
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
@@ -28,14 +29,16 @@ const Main = () => {
 
   const portfolioRef = useRef(null);
   const servicesRef = useRef(null);
-  const aboutRef = useState(null);
+  const aboutRef = useRef(null);
   useEffect(() => {
     if (!mobile) {
       const handleWheel = (event) => {
         if (event.deltaY > 0) {
           // User scrolls down
           setFolio(true);
-          window.history.pushState(null, null, "/projects");
+          if (!about && !allServices) {
+            window.history.pushState(null, null, "/projects");
+          }
         }
       };
 
@@ -78,7 +81,7 @@ const Main = () => {
           if (scrollTop === 0) {
             setFolio(true);
             setAllServices(false);
-            window.history.pushState(null, null, "/products");
+            window.history.pushState(null, null, "/projects");
           }
 
           // If the user has scrolled to the very bottom, set allServices to true
@@ -113,18 +116,27 @@ const Main = () => {
 
         if (currentPortfolioRef) {
           const scrollTop = currentPortfolioRef.scrollTop;
-          currentPortfolioRef.scrollTop = scrollTop + 20;
+          setTimeout(() => {
+            currentPortfolioRef.scrollTop = 20;
+          }, 900);
+
           currentPortfolioRef.addEventListener("scroll", handlePortfolioScroll);
         }
 
         if (currentServicesRef) {
           const scrollTop = currentServicesRef.scrollTop;
-          currentServicesRef.scrollTop = scrollTop + 20;
+
+          setTimeout(() => {
+            currentServicesRef.scrollTop = 20;
+          }, 900);
           currentServicesRef.addEventListener("scroll", handleServicesScroll);
         }
         if (currentAboutRef) {
           const scrollTop = currentAboutRef.scrollTop;
-          currentAboutRef.scrollTop = scrollTop + 20;
+
+          setTimeout(() => {
+            currentAboutRef.scrollTop = 20;
+          }, 900);
           currentAboutRef.addEventListener("scroll", handleAboutScroll);
         }
       }
@@ -291,6 +303,7 @@ const Main = () => {
 
   return (
     <>
+      <TopBar />
       {isload == 0 && (
         <div className="startload">
           <div className="h-100 d-flex align-items-center justify-content-center">
