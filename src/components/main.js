@@ -344,15 +344,15 @@ const Main = () => {
 
             {!mobile && (
               <div className="position-absolute desk-left-socials">
-                <div className="bubble">
+                <a href="#" target="_blank" className="bubble">
                   <img src="./icons/instagram.svg" />
-                </div>
-                <div className="bubble">
+                </a>
+                <a href="#" target="_blank" className="bubble">
                   <img src="./icons/facebook.svg" />
-                </div>
-                <div className="bubble">
+                </a>
+                <a href="https://www.linkedin.com/company/bharat-web-dev/?viewAsMember=true" target="_blank" className="bubble">
                   <img src="./icons/linkedin.svg" />
-                </div>
+                </a>
               </div>
             )}
           </motion.div>

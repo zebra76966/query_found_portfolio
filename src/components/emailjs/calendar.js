@@ -22,7 +22,16 @@ const Calendar = () => {
       </button>
       {calendar && (
         <div className="w-100 text-center mt-1">
-          <InlineWidget url="https://calendly.com/zebcorp76" />
+          <InlineWidget
+            url="https://calendly.com/zebcorp76"
+            pageSettings={{
+              backgroundColor: "#351518",
+              hideEventTypeDetails: false,
+              hideLandingPageDetails: false,
+              primaryColor: "#ee9747",
+              textColor: "#ee9747",
+            }}
+          />
         </div>
       )}
       {/* <PopupWidget url="https://calendly.com/zebcorp76" rootElement={document.getElementById("root")} text="Schedule a meeting" textColor="#ffffff" color="#00a2ff" /> */}

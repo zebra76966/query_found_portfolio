@@ -63,6 +63,27 @@
 .tbar:nth-child(5) {
   animation-delay: 30s;
   animation-fill-mode: forwards;
+  width: 500px;
+}
+
+.calendly-inline-widget {
+  height: 70dvh !important;
+}
+
+.calendly-inline-widget::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+  background-color: #ee9747;
+}
+
+.calendly-inline-widget:hover::-webkit-scrollbar {
+  transition: all 0.2s ease-in-out;
+  height: 5px;
+}
+
+.calendly-inline-widget::-webkit-scrollbar-thumb {
+  background-color: #351518;
+  width: 5px;
 }
 
 @keyframes inout {

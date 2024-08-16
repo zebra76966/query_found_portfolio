@@ -102,15 +102,15 @@ const Hero = ({ mobile }) => {
           </motion.div>
 
           <motion.div className="position-absolute mobile left-socials" initial="hidden" animate="visible" exit="exit" variants={fadeUpVariants} transition={{ duration: 0.5, delay: 1 + 3 }}>
-            <div className="bubble">
+            <a href="#" target="_blank" className="bubble">
               <img src="./icons/instagram.svg" />
-            </div>
-            <div className="bubble">
+            </a>
+            <a href="#" target="_blank" className="bubble">
               <img src="./icons/facebook.svg" />
-            </div>
-            <div className="bubble">
+            </a>
+            <a href="https://www.linkedin.com/company/bharat-web-dev/?viewAsMember=true" target="_blank" className="bubble">
               <img src="./icons/linkedin.svg" />
-            </div>
+            </a>
           </motion.div>
         </div>
       )}

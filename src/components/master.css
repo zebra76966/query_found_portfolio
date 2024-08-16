@@ -1718,6 +1718,9 @@ hr {
   .tbar .btn {
     font-size: 0.9em !important;
   }
+  .tbar:nth-child(5) {
+    width: auto;
+  }
 
   .mobile.left-text {
     font-size: 30px;
@@ -1804,7 +1807,7 @@ hr {
     left: unset !important;
     top: 28% !important;
     right: 20% !important;
-    z-index: 99;
+    z-index: 98;
     scale: 0.6;
   }
   .mobileSidenav2.active.hnav2::before {
