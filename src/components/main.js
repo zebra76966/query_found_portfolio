@@ -24,6 +24,7 @@ const Main = () => {
 
   const [activeProj2, setCurentProj2] = useState(0);
   const [allServices, setAllServices] = useState(false);
+  const [portProg, setPortProg] = useState(0);
 
   const [about, setAbout] = useState(false);
 
@@ -33,12 +34,20 @@ const Main = () => {
   useEffect(() => {
     if (!mobile) {
       const handleWheel = (event) => {
-        if (event.deltaY > 0) {
+        console.log(portProg);
+
+        if (event.deltaY > 1 && portProg < 100) {
+          setPortProg(portProg + 10);
+        } else if (event.deltaY < 0 && portProg !== 0) {
+          setPortProg(portProg - 10);
+        } else if (portProg == 100) {
           // User scrolls down
           setFolio(true);
           if (!about && !allServices) {
             window.history.pushState(null, null, "/projects");
           }
+        } else if (portProg > 100) {
+          setPortProg(0);
         }
       };
 
@@ -61,6 +70,7 @@ const Main = () => {
 
           // If the user has scrolled back to the top, set portfolio to false
           if (scrollTop === 0) {
+            setPortProg(0);
             setFolio(false);
             window.history.pushState(null, null, "/");
           }
@@ -156,7 +166,7 @@ const Main = () => {
         }
       };
     }
-  }, [portfolio, mobile, allServices, about]);
+  }, [portfolio, mobile, allServices, about, portProg]);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
@@ -318,6 +328,24 @@ const Main = () => {
       )}
 
       <div className={`${mobile ? "" : "hero"} d-flex align-items-center justify-content-center`}>
+        {!mobile && (
+          <>
+            <div className="progressBar  txtcolor-plain text-end fw-bold" style={{ width: `${portProg < 101 ? portProg : 100}%`, paddingRight: `${portProg > 0 ? "1.5em" : "0"}` }}>
+              {portProg > 0 && (
+                <>
+                  Projects <i className="fa fa-angle-right ms-1 fw-bold"></i> <i className="fa fa-angle-right ms-1 fw-bold"></i>{" "}
+                </>
+              )}
+            </div>
+
+            {portProg == 0 && (
+              <div className="sDownWrapper">
+                <div className="sDown"></div>
+              </div>
+            )}
+          </>
+        )}
+
         <div className="row w-100">
           <motion.div
             className={`${mobile ? "" : "col-lg-1"} mobileBar bgcolor-plain ${mobile ? "shadow-lg roundedTopBar" : ""}`}

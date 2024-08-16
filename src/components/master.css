@@ -2075,3 +2075,61 @@ a {
 .border-dashed {
   border: 6px dashed #351518;
 }
+
+.progressBar {
+  background-color: #351518;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-family: "steelfish-bi";
+  font-size: 27px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 15px;
+  /* border-end-end-radius: 5px; */
+}
+
+.sDownWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+.sDown {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.sDown::before {
+  animation: bounce 1s ease infinite;
+  bottom: 0.1rem;
+  color: #351518;
+  content: "╲╱";
+  font-weight: 900;
+  font-size: 2rem;
+  height: 2.5rem;
+  left: 50%;
+  letter-spacing: -1px;
+  line-height: 4rem;
+  margin-left: -3rem;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 6rem;
+  opacity: 0;
+  animation-delay: 5s;
+}
+
+@keyframes bounce {
+  10% {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
