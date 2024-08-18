@@ -60,7 +60,7 @@ const Project = ({ mobile }) => {
   return (
     <>
       {!mobile && (
-        <div className={`box-projects ${enlarge ? "project-enlarge" : ""} py-4 px-3`}>
+        <div className={`box-projects ${enlarge ? "project-enlarge" : ""} py-4 px-3`} style={{ overflow: "hidden" }}>
           <div className="d-flex h-100">
             <div className="carousel-left position-relative">
               <div className={`text-head d-flex align-items-center justify-content-between my-3 `}>

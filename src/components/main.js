@@ -398,7 +398,7 @@ const Main = () => {
 
             {mobile && <Services mobile={mobile} />}
           </div>
-          <div className={`col-lg-3 col-xxl-4 col-12 p-0 chk thinScroll ${mobile ? "d-none" : ""}`}>
+          <div className={`col-lg-3 col-xxl-4 col-12 p-0 chk ${mobile ? "d-none" : ""}`}>
             <div className="d-flex justify-content-end">
               <Project mobile={mobile} />
             </div>
