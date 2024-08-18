@@ -33,7 +33,6 @@ const Main = () => {
   const aboutRef = useRef(null);
   useEffect(() => {
     if (!mobile) {
-      setPortProg(0);
       const handleWheel = (event) => {
         console.log(portProg);
 
@@ -299,6 +298,7 @@ const Main = () => {
         setAllServices(false);
         setAbout(false);
         setCurentProj(0);
+        setPortProg(0);
       }
     };
 
