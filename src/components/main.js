@@ -361,7 +361,6 @@ const Main = () => {
               setFolio={(e) => setFolio(e)}
               setCurentProj={(e) => {
                 setCurentProj(e);
-                setCurentProj(e);
               }}
               folio={portfolio}
               setAllServices={(e) => setAllServices(e)}
@@ -369,6 +368,7 @@ const Main = () => {
               activeProj={activeProj}
               setAbout={(e) => setAbout(e)}
               about={about}
+              setPortProg={(e) => setPortProg(e)}
             />
 
             {!mobile && (
