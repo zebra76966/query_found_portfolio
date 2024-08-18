@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allServices, activeProj, setAbout, about }) => {
+const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allServices, activeProj, setAbout, about, setPortProg }) => {
   const [active, setActive] = useState("home");
   const [mobileActive, setMobileAactive] = useState(false);
 
@@ -61,6 +61,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                 setAllServices(false);
                 setAbout(false);
                 setCurentProj(0);
+                setPortProg(0);
                 window.history.pushState(null, null, "/");
               }}
             >
@@ -76,6 +77,7 @@ const Header = ({ mobile, setFolio, setCurentProj, folio, setAllServices, allSer
                 setAllServices(false);
                 setAbout(false);
                 setCurentProj(0);
+                setPortProg(0);
                 window.history.pushState(null, null, "/");
               }}
             >
